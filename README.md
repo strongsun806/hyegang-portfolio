@@ -4,7 +4,7 @@
 > 복잡한 도메인 데이터와 3D 공간 인프라, 에이전틱 AI 워크플로우를 직관적인 사용자 경험과 고성능 웹 아키텍처로 구현하는 프론트엔드 엔지니어 권혜강의 포트폴리오 저장소입니다.
 
 [![Live Portfolio](https://img.shields.io/badge/Live_Portfolio-GitHub_Pages-38BDF8?style=flat-square&logo=github&logoColor=white)](https://strongsun806.github.io/hyegang-portfolio/)
-[![Hackathon](https://img.shields.io/badge/2026_Google_DeepMind-AI_Hackathon-7C3AED?style=flat-square&logo=googlegemini&logoColor=white)](https://github.com/strongsun806/GDM_REPO1)
+[![Hackathon](https://img.shields.io/badge/2026_Google_DeepMind-SafeCity_AI-7C3AED?style=flat-square&logo=googlegemini&logoColor=white)](https://github.com/strongsun806/GDM_HACK1)
 [![Tech Stack](https://img.shields.io/badge/Stack-React_19_|_TypeScript_|_Tailwind_CSS-06B6D4?style=flat-square)](https://github.com/strongsun806/hyegang-portfolio)
 [![GitHub](https://img.shields.io/badge/GitHub-strongsun806-181717?style=flat-square&logo=github)](https://github.com/strongsun806)
 
@@ -14,32 +14,24 @@
 
 ## 🛠️ Core Tech Stack
 
-- **Frontend & UI:** React 19, TypeScript, Tailwind CSS, Vite, Lucide Icons
-- **AI & Multimodal UX:** Google DeepMind Gemini 4 Argon, Gemma 4 On-Device, Web Speech API, Web Audio API
-- **3D & Graphics:** Three.js, React Three Fiber (R3F), Custom WebGL Shaders, HTML5 Canvas 2D Physics Engine
-- **State & Architecture:** Zustand, Web Workers (Non-blocking Data Pipeline), WebSocket, Rule Engine
-- **Deployment & CI/CD:** GitHub Pages, GitHub Actions, Netlify
+- **Frontend & UI:** Next.js 14, React 19, TypeScript, Tailwind CSS, Vite, Lucide Icons
+- **3D & Spatial AI:** Three.js, React Three Fiber (R3F), Google DeepMind Gemini 4 Argon (1M Context), Gemma 3 On-Device
+- **State & Architecture:** Zustand, Web Workers (Non-blocking Data Pipeline), WebSocket, Companion Safety Verifier Loop
+- **Deployment & CI/CD:** GitHub Pages, GitHub Actions, Google Cloud Run (Docker), Netlify
 
 ---
 
 ## 📌 Featured Highlights
 
-### 0. 🏆 2026 Google DeepMind AI Hackathon & Creative AI Works
+### 0. 🏆 2026 Google DeepMind AI Hackathon (Track 3: Google AI for Social Good)
 
-#### ✨ [AccessPilot AI (ARGON-01)](https://github.com/strongsun806/GDM_REPO1) — Autonomous Web Navigator & Live WCAG 2.2 Re-Compiler
-* **2026 Google DeepMind Hackathon (Argon Track) 출품작**
-* 액티브X/보안 플러그인, 다중 중첩 팝업, 10px 저대비 텍스트 등 **‘적대적 웹(Hostile Web)’**을 **Gemini 4 Argon**의 1M+ 컨텍스트 및 실시간 AST 재합성으로 가로채 **WCAG 2.2 AAA 표준(14.2:1 고대비, 64px 대형 터치 타깃, 쉬운말 번역)**으로 즉각 재컴파일하는 자율 웹 에이전트
+#### 🛡️ [SafeCity AI](https://github.com/strongsun806/GDM_HACK1) — Autonomous 3D Underground Disaster Response & Accessible Evacuation Digital Twin
+* **2026 Google DeepMind AI Hackathon 공식 출품작 (`GDM_HACK1`)**
+* 시간당 110mm 극한호우·지하철 화재 시 계단이 급류 폭포(`>2.7m/s`)로 변해 고립되는 휠체어 이용자·고령자·외국인을 보호하기 위한 **실시간 3D 지하역사 재난 관제 및 배리어프리 대피 디지털 트윈**
 * **Key Achievements:**
-  - **Gemma 4 On-Device** 기반 주민등록번호·민감 개인정보 로컬 비식별화 마스킹 (`RRN Redaction`)
-  - **Ghost Cursor** 자율 내비게이션을 통한 팝업 3종 일괄 차단 및 **Web Speech API** 양방향 음성 승인
-  - 고령자·장애인을 위한 4종 장애 렌즈(백내장/색각이상/수전증) 시뮬레이터 및 WAI-ARIA 실시간 검증 하네스 내장
-
-#### 🎞️ [RE:MEMORY (기억의 필름)](https://github.com/strongsun806/RE-MEMORY) — AI Cinema & Webtoon Memory Restorer
-* 어르신의 파편화된 구술 기억을 기승전결 4막 시네마틱 웹툰 필름으로 복원하는 박물관 전시급 AI 기억 복원 솔루션
-* **Character Reference Sheet 잠금** 및 **Argon 3대 연속성 감사 & Self-Healing 패치**로 99%+ 시각적 일관성 보장, Web Audio API 절차적 사운드스케이프 실시간 합성
-
-#### 🍮 [POMPOM ARCADE (폼폼푸린 레트로 아케이드)](https://github.com/strongsun806/REMAKEGAME) — 3D Retro Arcade Game Studio
-* Three.js 360° 3D 아케이드 캐비닛과 Custom CRT 스캔라인 셰이더, 자체 제작 PICO-8 스타일 2D 가상 픽셀 엔진에서 구동되는 6종 아케이드 게임 스튜디오
+  - **Gemini 4 Argon 1M 통합 컨텍스트(`418.2k tokens`)**: 184페이지 역사 CAD 도면, 기상청 실시간 강우 레이더, 24개 IoT 수위 센서를 단일 패스로 추론하여 **일반 승객(106명, 고지대 동측 4번 출구 Neon Green 경로)**과 **교통약자(14명, IP68 방수·양압 엘리베이터 #3 Neon Yellow 경로)** 3D 대피 벡터 분리 생성
+  - **2-Stage Companion Safety Verifier Loop**: `gemini-2.0-flash-safety-verifier` + 유체역학/ADA 경사도(`<= 1/20`) 검증기 + 온디바이스 폴백(`gemma-3-4b-it-on-device`) 및 **Human-in-the-Loop(HITL) 역무실장 승인 게이트**로 침수 위험 반경(`3.8m`) 침범 노드 자가 교정
+  - **60FPS Three.js / R3F 디지털 트윈 & 4개국어 실시간 음성 안내**: 물리 기반 수면(`MeshPhysicalMaterial`), 360+ 계단 폭포 파티클 및 자동 차수판, 자율 정찰 드론(`UAV-01 Argon Scout`), 한·영·일·중(`KO/EN/JA/ZH`) 실시간 Web Speech API 음성 안내 방송 구현
 
 ---
 

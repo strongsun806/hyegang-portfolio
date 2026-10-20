@@ -37,13 +37,13 @@ export const Hero = () => {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-teal-300 to-indigo-400">
               High-Performance
             </span>{' '}
-            AI Experiences.
+            Spatial AI.
           </h1>
 
           <p className="text-zinc-400 text-base sm:text-lg max-w-2xl leading-relaxed">
-            안녕하세요, 프론트엔드 &amp; 크리에이티브 AI 엔지니어 <strong className="text-zinc-200 font-semibold">권혜강(Hyegang Kwon)</strong>입니다.
-            대규모 3D 공간·센서 데이터의 실시간 시각화(Digital Twin)부터{' '}
-            <strong className="text-purple-300 font-medium">2026 Google DeepMind AI Hackathon</strong>에서 구현한 에이전틱 AI 웹 재컴파일러까지,
+            안녕하세요, 프론트엔드 &amp; 3D 공간 웹 엔지니어 <strong className="text-zinc-200 font-semibold">권혜강(Hyegang Kwon)</strong>입니다.
+            대규모 공간·센서 데이터의 실시간 시각화(Digital Twin)부터{' '}
+            <strong className="text-purple-300 font-medium">2026 Google DeepMind AI Hackathon</strong>에서 구현한 3D 지하역사 재난 대피 디지털 트윈(<strong className="text-white">SafeCity AI</strong>)까지,
             사용성과 엔지니어링 성능 지표를 집요하게 최적화합니다.
           </p>
 
@@ -104,22 +104,22 @@ export const Hero = () => {
             <li className="flex items-start gap-2">
               <span className="text-purple-400">01.</span>
               <div>
-                <span className="text-white font-medium">Agentic AI &amp; Multimodal Web UX</span>
-                <p className="text-zinc-500 text-[11px] mt-0.5">Google DeepMind Gemini 4 Argon, AST Re-Compiler</p>
+                <span className="text-white font-medium">3D Spatial AI &amp; Digital Twin</span>
+                <p className="text-zinc-500 text-[11px] mt-0.5">Gemini 4 Argon, Three.js / R3F, InstancedMesh 60fps</p>
               </div>
             </li>
             <li className="flex items-start gap-2">
               <span className="text-cyan-400">02.</span>
               <div>
-                <span className="text-white font-medium">3D Graphics &amp; Spatial Web</span>
-                <p className="text-zinc-500 text-[11px] mt-0.5">Three.js, R3F, WebGL Shader, InstancedMesh 60fps</p>
+                <span className="text-white font-medium">Non-blocking Thread Pipeline</span>
+                <p className="text-zinc-500 text-[11px] mt-0.5">Web Workers, WebSocket 실시간 스트림 분리</p>
               </div>
             </li>
             <li className="flex items-start gap-2">
               <span className="text-cyan-400">03.</span>
               <div>
-                <span className="text-white font-medium">Non-blocking &amp; Resilient Pipeline</span>
-                <p className="text-zinc-500 text-[11px] mt-0.5">Web Workers, WebSocket 스트림 분리, Rule Engine</p>
+                <span className="text-white font-medium">Resilient Web Architecture</span>
+                <p className="text-zinc-500 text-[11px] mt-0.5">Next.js, React, TypeScript, Safety Verifier Loop</p>
               </div>
             </li>
           </ul>
