@@ -6,15 +6,336 @@ import {
   Bot, 
   Database, 
   ExternalLink,
-  Cpu
+  Cpu,
+  ShieldCheck,
+  Film,
+  Gamepad2,
+  Eye
 } from 'lucide-react';
 
 export const FeaturedProjects = () => {
   const [activeFinderTab, setActiveFinderTab] = useState<'orbit' | 'picking' | 'stream'>('orbit');
+  const [activeHackathonTab, setActiveHackathonTab] = useState<'recompiler' | 'privacy' | 'lens'>('recompiler');
 
   return (
     <section className="py-24 px-6 max-w-7xl mx-auto text-zinc-100 space-y-36">
-      
+
+      {/* ========================================================================= */}
+      {/* 00. SPECIAL HIGHLIGHT: 2026 GOOGLE DEEPMIND AI HACKATHON                  */}
+      {/* ========================================================================= */}
+      <div id="hackathon" className="scroll-mt-24 space-y-12">
+        <div className="flex items-center gap-3 mb-2">
+          <span className="px-3 py-1 text-xs font-mono font-semibold tracking-wider uppercase bg-purple-500/15 text-purple-300 border border-purple-500/30 rounded flex items-center gap-1.5">
+            <Sparkles className="w-3.5 h-3.5 text-purple-400" />
+            2026 Google DeepMind AI Hackathon
+          </span>
+          <span className="text-xs font-mono text-zinc-500 hidden sm:inline">
+            Powered by Gemini 4 Argon &amp; Gemma 4 On-Device
+          </span>
+          <div className="h-px flex-1 bg-zinc-800" />
+        </div>
+
+        {/* 메인 해커톤 출품작: AccessPilot AI (ARGON-01) */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <div className="lg:col-span-5 space-y-6">
+            <div>
+              <div className="inline-flex items-center gap-2 text-xs font-mono text-purple-400 mb-2">
+                <span>ARGON TRACK OFFICIAL SUBMISSION</span>
+              </div>
+              <h2 className="text-3xl sm:text-4xl font-black tracking-tight text-white mb-2">
+                AccessPilot AI <span className="text-purple-400 text-2xl font-mono">(ARGON-01)</span>
+              </h2>
+              <p className="text-base text-purple-300 font-mono">
+                Autonomous Web Navigator &amp; Live WCAG 2.2 Re-Compiler
+              </p>
+            </div>
+
+            <p className="text-zinc-400 text-sm leading-relaxed">
+              공공기관·시니어 금융·대학병원 예약 등 플러그인 강제 설치와 저대비 10px 폰트, 다중 팝업으로 가득한 <strong className="text-zinc-200">&apos;적대적 웹(Hostile Web)&apos;</strong>을{' '}
+              <strong className="text-purple-300">Gemini 4 Argon</strong>의 초거대 1M+ 컨텍스트와 실시간 AST 코드 재합성으로 가로채어,{' '}
+              <strong className="text-emerald-400">WCAG 2.2 AAA 표준(14.2:1 고대비, 64px 대형 터치 타깃, 쉬운말 번역)</strong> 인터페이스로 즉각 재컴파일하는 자율 웹 에이전트입니다.
+            </p>
+
+            <div className="grid grid-cols-3 gap-3 py-2">
+              <div className="p-3 bg-zinc-900 border border-zinc-800 rounded-lg">
+                <div className="text-[11px] text-zinc-500 font-mono uppercase">Compliance</div>
+                <div className="text-lg font-bold text-emerald-400 mt-1">100 AAA</div>
+                <div className="text-[11px] text-zinc-400">WCAG 28 → 100</div>
+              </div>
+              <div className="p-3 bg-zinc-900 border border-zinc-800 rounded-lg">
+                <div className="text-[11px] text-zinc-500 font-mono uppercase">Contrast</div>
+                <div className="text-lg font-bold text-purple-300 mt-1">14.2 : 1</div>
+                <div className="text-[11px] text-zinc-400">64px Touch UI</div>
+              </div>
+              <div className="p-3 bg-zinc-900 border border-zinc-800 rounded-lg">
+                <div className="text-[11px] text-zinc-500 font-mono uppercase">Privacy</div>
+                <div className="text-lg font-bold text-cyan-400 mt-1">Gemma 4</div>
+                <div className="text-[11px] text-zinc-400">On-Device Mask</div>
+              </div>
+            </div>
+
+            <div className="space-y-2">
+              <div className="text-xs font-mono uppercase text-zinc-500">Tech Architecture</div>
+              <div className="flex flex-wrap gap-1.5">
+                {[
+                  'Gemini 4 Argon',
+                  'Gemma 4 On-Device',
+                  'React 19',
+                  'TypeScript',
+                  'AST Re-Compiler',
+                  'Web Speech API',
+                  'WCAG 2.2 AAA',
+                  'Tailwind CSS v4'
+                ].map((tech) => (
+                  <span
+                    key={tech}
+                    className="px-2.5 py-1 text-xs font-medium bg-zinc-900 text-zinc-300 border border-zinc-800 rounded-md"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <div className="flex items-center gap-3 pt-2">
+              <a
+                href="https://github.com/strongsun806/GDM_REPO1"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-zinc-950 bg-white hover:bg-zinc-200 transition-colors rounded-lg shadow-sm"
+              >
+                GitHub Repository ↗
+              </a>
+              <a
+                href="https://github.com/strongsun806/RE-MEMORY"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-purple-300 bg-purple-500/10 hover:bg-purple-500/20 border border-purple-500/30 transition-colors rounded-lg"
+              >
+                RE:MEMORY Repo ↗
+              </a>
+            </div>
+          </div>
+
+          {/* 우측: AccessPilot AI 실시간 듀얼 재컴파일 시뮬레이터 */}
+          <div className="lg:col-span-7 space-y-3">
+            <div className="relative rounded-xl overflow-hidden border border-purple-500/30 bg-zinc-950 shadow-2xl p-5 sm:p-6 space-y-4">
+              {/* 상단 콘솔 바 */}
+              <div className="flex items-center justify-between border-b border-zinc-800 pb-3">
+                <div className="flex items-center gap-2">
+                  <span className="w-2.5 h-2.5 rounded-full bg-purple-400 animate-pulse" />
+                  <span className="text-xs font-mono font-bold text-white">
+                    ARGON-01 LIVE AST RE-COMPILER
+                  </span>
+                </div>
+                <span className="text-[11px] font-mono text-emerald-400 bg-emerald-500/10 px-2.5 py-0.5 rounded border border-emerald-500/20">
+                  WCAG 2.2: 28/100 ➔ 100/100 AAA
+                </span>
+              </div>
+
+              {/* 탭별 시뮬레이션 화면 */}
+              {activeHackathonTab === 'recompiler' && (
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div className="p-3.5 rounded-lg bg-zinc-900/90 border border-rose-500/30 space-y-2">
+                    <div className="flex items-center justify-between text-[10px] font-mono">
+                      <span className="text-rose-400 font-bold">HOSTILE LEGACY DOM</span>
+                      <span className="text-zinc-500">SCORE: 28/100</span>
+                    </div>
+                    <div className="p-2 rounded bg-zinc-950 border border-zinc-800 text-[11px] text-zinc-500 space-y-1 font-mono">
+                      <div className="text-rose-400/90">⚠ AnySign4PC.exe 보안 모듈 설치 필수</div>
+                      <div>• 중첩 팝업 3종 &amp; 키보드 포커스 트랩</div>
+                      <div>• &quot;본인일부부담금 산정특례 제34조...&quot; (10px)</div>
+                    </div>
+                  </div>
+
+                  <div className="p-3.5 rounded-lg bg-purple-950/20 border border-emerald-500/40 space-y-2">
+                    <div className="flex items-center justify-between text-[10px] font-mono">
+                      <span className="text-emerald-400 font-bold">ARGON RE-COMPILED UI</span>
+                      <span className="text-emerald-300">AAA 100/100</span>
+                    </div>
+                    <div className="p-2 rounded bg-zinc-950 border border-emerald-500/30 text-[11px] text-zinc-200 space-y-1 font-mono">
+                      <div className="text-emerald-400 font-bold">✓ 팝업 3종 자동 차단 &amp; 쉬운말 변환</div>
+                      <div className="text-white font-semibold">&quot;65세 이상 어르신 진료비 30% 감면 혜택&quot;</div>
+                      <div className="text-cyan-300">• 14.2:1 고대비 · 64×64px 원클릭 음성 승인</div>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {activeHackathonTab === 'privacy' && (
+                <div className="p-4 rounded-lg bg-zinc-900/90 border border-cyan-500/30 space-y-3 font-mono text-xs">
+                  <div className="flex items-center justify-between text-cyan-400">
+                    <span className="flex items-center gap-1.5 font-bold">
+                      <ShieldCheck className="w-4 h-4" /> GEMMA 4 ON-DEVICE PII REDACTION
+                    </span>
+                    <span className="text-[10px] bg-cyan-500/10 px-2 py-0.5 rounded border border-cyan-500/20">
+                      ZERO CLOUD LEAK
+                    </span>
+                  </div>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-[11px]">
+                    <div className="p-2.5 rounded bg-zinc-950 border border-zinc-800">
+                      <div className="text-zinc-500">RAW INPUT STREAM</div>
+                      <div className="text-zinc-300 mt-1">주민번호: 620315-1****** (로컬 감지)</div>
+                    </div>
+                    <div className="p-2.5 rounded bg-zinc-950 border border-emerald-500/30">
+                      <div className="text-emerald-400">MASKED AST TOKEN</div>
+                      <div className="text-white mt-1">RRN_TOKEN: [REDACTED_ON_DEVICE]</div>
+                    </div>
+                  </div>
+                  <div className="text-[11px] text-zinc-400">
+                    • Ghost Cursor 자율 에이전트가 액티브X/보안 팝업을 자동 해제하고 Web Speech API 양방향 음성 대화로 예약을 완료합니다.
+                  </div>
+                </div>
+              )}
+
+              {activeHackathonTab === 'lens' && (
+                <div className="p-4 rounded-lg bg-zinc-900/90 border border-amber-500/30 space-y-3 font-mono text-xs">
+                  <div className="flex items-center justify-between text-amber-300">
+                    <span className="flex items-center gap-1.5 font-bold">
+                      <Eye className="w-4 h-4" /> INTERACTIVE IMPAIRMENT LENS &amp; ARIA HARNESS
+                    </span>
+                    <span className="text-[10px] bg-amber-500/10 px-2 py-0.5 rounded border border-amber-500/20">
+                      4 LENSES ACTIVE
+                    </span>
+                  </div>
+                  <div className="grid grid-cols-3 gap-2 text-[11px] text-center">
+                    <div className="p-2 rounded bg-zinc-950 border border-zinc-800">
+                      <div className="text-amber-400 font-bold">백내장 시뮬레이션</div>
+                      <div className="text-zinc-400 text-[10px] mt-0.5">Severe Cataracts Blur</div>
+                    </div>
+                    <div className="p-2 rounded bg-zinc-950 border border-zinc-800">
+                      <div className="text-cyan-400 font-bold">색각/저대비 손실</div>
+                      <div className="text-zinc-400 text-[10px] mt-0.5">Monochrome Loss</div>
+                    </div>
+                    <div className="p-2 rounded bg-zinc-950 border border-zinc-800">
+                      <div className="text-purple-400 font-bold">파킨슨 수전증</div>
+                      <div className="text-zinc-400 text-[10px] mt-0.5">Motor Tremor Jitter</div>
+                    </div>
+                  </div>
+                  <div className="text-[11px] text-zinc-400">
+                    • 서울대병원 중증외래 예약(`SNU-MED-01`), 정부24 기초연금(`GOV-WEL-02`), 시니어 뱅킹(`FIN-AUTH-03`) 3대 시나리오 실시간 검증.
+                  </div>
+                </div>
+              )}
+
+              {/* 하단 상태 표시 */}
+              <div className="flex items-center justify-between text-[11px] font-mono text-zinc-400 pt-1">
+                <span>ENGINE: Gemini 4 Argon (1M+ Context AST)</span>
+                <span className="text-purple-300 font-bold">TOUCH TARGET: 64×64px PASS</span>
+              </div>
+            </div>
+
+            {/* 시점 탭 전환 */}
+            <div className="flex items-center justify-between p-1 bg-zinc-900 border border-zinc-800 rounded-lg">
+              <span className="text-xs font-mono text-zinc-500 pl-3">INSPECTOR MODE:</span>
+              <div className="flex gap-1">
+                {(['recompiler', 'privacy', 'lens'] as const).map((tab, idx) => (
+                  <button
+                    key={tab}
+                    onClick={() => setActiveHackathonTab(tab)}
+                    className={`px-3 py-1.5 text-xs font-medium rounded-md transition-all ${
+                      activeHackathonTab === tab ? 'bg-zinc-800 text-white shadow-sm' : 'text-zinc-400 hover:text-white'
+                    }`}
+                  >
+                    {idx + 1}. {tab === 'recompiler' ? '듀얼 AST 재컴파일' : tab === 'privacy' ? 'Gemma 4 프라이버시' : '장애 렌즈 & 검증'}
+                  </button>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* 해커톤 연계 크리에이티브 AI & 3D 스튜디오 작품 2선 (RE:MEMORY & POMPOM ARCADE) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
+          {/* Card A: RE:MEMORY */}
+          <div className="p-6 rounded-xl bg-zinc-900/60 border border-purple-500/20 hover:border-purple-500/40 transition-all flex flex-col justify-between space-y-4">
+            <div className="space-y-3">
+              <div className="flex items-center justify-between">
+                <div className="w-10 h-10 rounded-lg bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400">
+                  <Film className="w-5 h-5" />
+                </div>
+                <span className="text-[11px] font-mono text-purple-300 bg-purple-500/10 px-2.5 py-0.5 rounded border border-purple-500/20">
+                  Gemini Argon Showrunner
+                </span>
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-white">RE:MEMORY (기억의 필름)</h3>
+                <p className="text-xs font-mono text-purple-400 mt-0.5">
+                  AI Cinema &amp; 4-Act Webtoon Memory Restorer
+                </p>
+              </div>
+              <p className="text-xs text-zinc-400 leading-relaxed">
+                어르신의 단편적인 구술 기억을 기승전결 4막 시네마틱 웹툰 필름으로 복원하는 박물관 전시급 AI 솔루션.{' '}
+                <strong className="text-zinc-200">Character Reference Sheet 잠금</strong>과 <strong className="text-zinc-200">Argon 3대 연속성 감사 &amp; Self-Healing 패치</strong>로 99% 이상의 시각적 일관성을 유지하며, Web Audio API 절차적 사운드스케이프(빗소리·LP 크랙클·피아노)와 21:9 시네마 플레이어를 제공합니다.
+              </p>
+            </div>
+            <div className="space-y-3 pt-2">
+              <div className="flex flex-wrap gap-1.5">
+                {['Gemini 3.8 Flash', 'Character Sheet Lock', 'Self-Healing Audit', 'Web Audio API', 'React 19'].map((t) => (
+                  <span key={t} className="px-2 py-0.5 text-[10px] bg-zinc-800 text-zinc-300 rounded font-mono">
+                    {t}
+                  </span>
+                ))}
+              </div>
+              <div className="flex items-center justify-between pt-2 border-t border-zinc-800 text-xs font-mono">
+                <span className="text-zinc-500">Museum-Grade Interactive AI Cinema</span>
+                <a
+                  href="https://github.com/strongsun806/RE-MEMORY"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-purple-300 hover:text-white inline-flex items-center gap-1"
+                >
+                  GitHub Source <ExternalLink className="w-3 h-3" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Card B: POMPOM ARCADE */}
+          <div className="p-6 rounded-xl bg-zinc-900/60 border border-amber-500/20 hover:border-amber-500/40 transition-all flex flex-col justify-between space-y-4">
+            <div className="space-y-3">
+              <div className="flex items-center justify-between">
+                <div className="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400">
+                  <Gamepad2 className="w-5 h-5" />
+                </div>
+                <span className="text-[11px] font-mono text-amber-300 bg-amber-500/10 px-2.5 py-0.5 rounded border border-amber-500/20">
+                  Three.js 3D Cabinet &amp; Pixel Engine
+                </span>
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-white">POMPOM ARCADE (폼폼푸린 레트로 아케이드)</h3>
+                <p className="text-xs font-mono text-amber-400 mt-0.5">
+                  3D Retro Arcade Studio &amp; 6-in-1 Custom Pixel Cartridges
+                </p>
+              </div>
+              <p className="text-xs text-zinc-400 leading-relaxed">
+                360° 회전 가능한 <strong className="text-zinc-200">Three.js 3D 아케이드 캐비닛</strong>과 커스텀 CRT 스캔라인 셰이더 위에서 직접 플레이하는 6종 레트로 픽셀 게임 스튜디오(Purin Run, Dodger, Bounce, Breakout, Maze, Flyer). PICO-8 스타일 자체 2D 가상 픽셀 엔진과 Web Audio API 사운드 합성을 구현했습니다.
+              </p>
+            </div>
+            <div className="space-y-3 pt-2">
+              <div className="flex flex-wrap gap-1.5">
+                {['Three.js', 'CRT Scanline Shader', '2D Pixel Engine', 'Web Audio API', 'React 19'].map((t) => (
+                  <span key={t} className="px-2 py-0.5 text-[10px] bg-zinc-800 text-zinc-300 rounded font-mono">
+                    {t}
+                  </span>
+                ))}
+              </div>
+              <div className="flex items-center justify-between pt-2 border-t border-zinc-800 text-xs font-mono">
+                <span className="text-zinc-500">6 Playable Genres in 3D Viewport</span>
+                <a
+                  href="https://github.com/strongsun806/REMAKEGAME"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-amber-300 hover:text-white inline-flex items-center gap-1"
+                >
+                  GitHub Source <ExternalLink className="w-3 h-3" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* ========================================================================= */}
       {/* 01. FLAGSHIP 1: FINDER (Digital Twin)                                     */}
       {/* ========================================================================= */}
@@ -33,7 +354,7 @@ export const FeaturedProjects = () => {
                 FINDER
               </h2>
               <p className="text-base text-cyan-400 font-mono">
-                Digital Twin 3D Monitoring & Spatial Platform
+                Digital Twin 3D Monitoring &amp; Spatial Platform
               </p>
             </div>
 
@@ -75,18 +396,10 @@ export const FeaturedProjects = () => {
 
             <div className="flex items-center gap-3 pt-2">
               <a
-                href="https://finder-demo.netlify.app"
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-zinc-950 bg-white hover:bg-zinc-200 transition-colors rounded-lg shadow-sm"
-              >
-                Live Demo ↗
-              </a>
-              <a
                 href="https://github.com/strongsun806"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-zinc-300 bg-zinc-900 hover:bg-zinc-800 border border-zinc-700/60 transition-colors rounded-lg"
+                className="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-zinc-950 bg-white hover:bg-zinc-200 transition-colors rounded-lg shadow-sm"
               >
                 GitHub Source ↗
               </a>
@@ -182,7 +495,7 @@ export const FeaturedProjects = () => {
                 <div className="p-3.5 rounded-lg bg-zinc-900 border border-zinc-800 space-y-2">
                   <div className="text-[11px] font-mono text-zinc-500 uppercase">Container Verification</div>
                   <div className="text-sm font-mono text-white font-bold">ISO 6346 Checked</div>
-                  <div className="text-[11px] text-zinc-400">B/L Format Validation & Status Check</div>
+                  <div className="text-[11px] text-zinc-400">B/L Format Validation &amp; Status Check</div>
                 </div>
 
                 <div className="p-3.5 rounded-lg bg-zinc-900 border border-zinc-800 space-y-2">
@@ -205,7 +518,7 @@ export const FeaturedProjects = () => {
                 Port Scrap
               </h2>
               <p className="text-base text-blue-400 font-mono">
-                Port Logistics Automated Settlement & Rate Platform
+                Port Logistics Automated Settlement &amp; Rate Platform
               </p>
             </div>
 
@@ -227,7 +540,7 @@ export const FeaturedProjects = () => {
               <div className="p-3 bg-zinc-900 border border-zinc-800 rounded-lg">
                 <div className="text-[11px] text-zinc-500 font-mono uppercase">SETTLEMENT</div>
                 <div className="text-lg font-bold text-emerald-400 mt-1">Automated</div>
-                <div className="text-[11px] text-zinc-400">PG & HOLD Release</div>
+                <div className="text-[11px] text-zinc-400">PG &amp; HOLD Release</div>
               </div>
             </div>
 
@@ -247,18 +560,10 @@ export const FeaturedProjects = () => {
 
             <div className="flex items-center gap-3 pt-2">
               <a
-                href="https://portscrap.netlify.app"
+                href="https://github.com/strongsun806"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-zinc-950 bg-white hover:bg-zinc-200 transition-colors rounded-lg shadow-sm"
-              >
-                Service Overview ↗
-              </a>
-              <a
-                href="https://github.com"
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-zinc-300 bg-zinc-900 hover:bg-zinc-800 border border-zinc-700/60 transition-colors rounded-lg"
               >
                 GitHub Source ↗
               </a>
@@ -273,7 +578,7 @@ export const FeaturedProjects = () => {
       <div>
         <div className="flex items-center gap-3 mb-8">
           <span className="px-2.5 py-1 text-xs font-mono font-semibold tracking-wider uppercase bg-amber-500/10 text-amber-400 border border-amber-500/20 rounded">
-            Interactive Apps & AI Services 03
+            Interactive Apps &amp; AI Services 03
           </span>
           <div className="h-px flex-1 bg-zinc-800" />
         </div>
@@ -300,7 +605,9 @@ export const FeaturedProjects = () => {
                 ))}
               </div>
               <div className="flex gap-2 pt-1 border-t border-zinc-800 text-xs font-mono text-zinc-400">
-                <a href="#" className="hover:text-white inline-flex items-center gap-1">Demo <ExternalLink className="w-3 h-3" /></a>
+                <a href="https://github.com/strongsun806" target="_blank" rel="noreferrer" className="hover:text-white inline-flex items-center gap-1">
+                  GitHub <ExternalLink className="w-3 h-3" />
+                </a>
               </div>
             </div>
           </div>
@@ -312,7 +619,7 @@ export const FeaturedProjects = () => {
                 <Cpu className="w-5 h-5" />
               </div>
               <h3 className="text-xl font-bold text-white">시냅스(Synapse) 파크</h3>
-              <p className="text-xs font-mono text-indigo-400">Everland AI Planning & Vision AI</p>
+              <p className="text-xs font-mono text-indigo-400">Everland AI Planning &amp; Vision AI</p>
               <p className="text-xs text-zinc-400 leading-relaxed">
                 에버랜드 테마파크 대상 비즈니스 기획 및 AI 서비스 프로젝트. Vision AI 기반 군중 밀집도 모니터링 시나리오와 LLM 연계 AI 컨시어지 경험 설계.
               </p>
@@ -326,7 +633,7 @@ export const FeaturedProjects = () => {
                 ))}
               </div>
               <div className="flex gap-2 pt-1 border-t border-zinc-800 text-xs font-mono text-zinc-400">
-                <span className="text-zinc-500">Service Planning & Architecture</span>
+                <span className="text-zinc-500">Service Planning &amp; Architecture</span>
               </div>
             </div>
           </div>
@@ -338,7 +645,7 @@ export const FeaturedProjects = () => {
                 <Sparkles className="w-5 h-5" />
               </div>
               <h3 className="text-xl font-bold text-white">폼폼푸린 인터랙티브 UI</h3>
-              <p className="text-xs font-mono text-amber-400">Theme Widget & Custom Animation</p>
+              <p className="text-xs font-mono text-amber-400">Theme Widget &amp; Custom Animation</p>
               <p className="text-xs text-zinc-400 leading-relaxed">
                 캐릭터 테마 기반 감각적인 프론트엔드 인터랙션과 커스텀 위젯 구현. 마이크로 인터랙션과 정밀한 CSS 스타일링을 통한 사용자 경험 극대화.
               </p>
@@ -352,7 +659,9 @@ export const FeaturedProjects = () => {
                 ))}
               </div>
               <div className="flex gap-2 pt-1 border-t border-zinc-800 text-xs font-mono text-zinc-400">
-                <a href="#" className="hover:text-white inline-flex items-center gap-1">Widget Live <ExternalLink className="w-3 h-3" /></a>
+                <a href="https://github.com/strongsun806/REMAKEGAME" target="_blank" rel="noreferrer" className="hover:text-white inline-flex items-center gap-1">
+                  Repository <ExternalLink className="w-3 h-3" />
+                </a>
               </div>
             </div>
           </div>
@@ -365,7 +674,7 @@ export const FeaturedProjects = () => {
       <div>
         <div className="flex items-center gap-3 mb-8">
           <span className="px-2.5 py-1 text-xs font-mono font-semibold tracking-wider uppercase bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 rounded">
-            Engineering Lab & Archive 04
+            Engineering Lab &amp; Archive 04
           </span>
           <div className="h-px flex-1 bg-zinc-800" />
         </div>
@@ -383,7 +692,7 @@ export const FeaturedProjects = () => {
             </div>
             <div>
               <h3 className="text-lg font-bold text-white">swea-picker bot</h3>
-              <p className="text-xs font-mono text-cyan-400 mt-0.5">SWEA Problem Curator & Automation</p>
+              <p className="text-xs font-mono text-cyan-400 mt-0.5">SWEA Problem Curator &amp; Automation</p>
             </div>
             <p className="text-xs text-zinc-400 leading-relaxed">
               삼성 SW Expert Academy(SWEA) 코딩 테스트 준비 스터디를 위한 알고리즘 자동 픽커 봇. 난이도별(D1~D4) 문제 랜덤 선별 및 스터디원 과제 큐레이션 파이프라인 자동화.
@@ -404,12 +713,12 @@ export const FeaturedProjects = () => {
                 <Database className="w-5 h-5" />
               </div>
               <span className="text-[11px] font-mono text-zinc-500 bg-zinc-800/80 px-2 py-0.5 rounded">
-                RAG & Machine Learning
+                RAG &amp; Machine Learning
               </span>
             </div>
             <div>
-              <h3 className="text-lg font-bold text-white">AI & Data Analytics Archive</h3>
-              <p className="text-xs font-mono text-purple-400 mt-0.5">RAG Parsing, ML Regression & Problem Solving</p>
+              <h3 className="text-lg font-bold text-white">AI &amp; Data Analytics Archive</h3>
+              <p className="text-xs font-mono text-purple-400 mt-0.5">RAG Parsing, ML Regression &amp; Problem Solving</p>
             </div>
             <p className="text-xs text-zinc-400 leading-relaxed">
               PyMuPDF 기반 문서 파싱 및 RAG(검색 증강 생성) 파이프라인 실험, Scikit-learn 회귀 분석 및 데이터 전처리(Pandas), SWEA 알고리즘 문제 해결 풀이 아카이브.
