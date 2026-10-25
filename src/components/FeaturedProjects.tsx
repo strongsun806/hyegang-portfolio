@@ -9,7 +9,9 @@ import {
   Cpu,
   ShieldCheck,
   Radio,
-  Volume2
+  Volume2,
+  Plane,
+  Zap
 } from 'lucide-react';
 
 export const FeaturedProjects = () => {
@@ -482,12 +484,203 @@ export const FeaturedProjects = () => {
       </div>
 
       {/* ========================================================================= */}
-      {/* 03. APPLIED WEB APPS & AI SERVICE PLANNING (LocalHub, Synapse, Pompom)    */}
+      {/* 02.5 AGENTIC AI & DOMAIN RAG SYSTEMS (TripPilot & Volt-Spec)             */}
+      {/* ========================================================================= */}
+      <div id="rag-projects" className="scroll-mt-24">
+        <div className="flex items-center gap-3 mb-8">
+          <span className="px-2.5 py-1 text-xs font-mono font-semibold tracking-wider uppercase bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 rounded flex items-center gap-1.5">
+            <Sparkles className="w-3.5 h-3.5 text-emerald-400" />
+            Agentic AI &amp; Domain RAG Systems 03
+          </span>
+          <span className="text-xs font-mono text-zinc-500 hidden sm:inline">
+            LangGraph Multi-Hop Inference &amp; Dual Vector Store Pipelines
+          </span>
+          <div className="h-px flex-1 bg-zinc-800" />
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {/* Card 1: TripPilot */}
+          <div className="rounded-xl border border-zinc-800 bg-zinc-950 p-6 sm:p-7 shadow-2xl flex flex-col justify-between space-y-6 hover:border-emerald-500/40 transition-all">
+            <div className="space-y-4">
+              <div className="flex items-center justify-between border-b border-zinc-800/80 pb-3">
+                <div className="flex items-center gap-2">
+                  <div className="w-8 h-8 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
+                    <Plane className="w-4 h-4" />
+                  </div>
+                  <span className="text-xs font-mono text-emerald-400 font-bold uppercase tracking-wider">
+                    Global Travel Copilot
+                  </span>
+                </div>
+                <a
+                  href="https://trippilothyegang.streamlit.app/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-[11px] font-mono text-emerald-300 bg-emerald-500/15 hover:bg-emerald-500/25 px-2.5 py-1 rounded border border-emerald-500/30 flex items-center gap-1 transition-colors"
+                >
+                  🌐 Live Service ↗
+                </a>
+              </div>
+
+              <div>
+                <h3 className="text-2xl font-black text-white">TripPilot (트립파일럿)</h3>
+                <p className="text-xs font-mono text-emerald-400 mt-1">
+                  Intelligent Multi-Hop Travel Copilot with 3D Mascot 'Tori'
+                </p>
+              </div>
+
+              <p className="text-zinc-400 text-xs sm:text-sm leading-relaxed">
+                전 세계 인기 59대 도시 메타데이터(<code className="text-emerald-300 font-mono">travel_meta</code>)와 한국어 위키백과(<code className="text-emerald-300 font-mono">travel_wiki</code>)를 결합한 <strong className="text-zinc-200">2-Pass LangGraph RAG</strong> 기반 여행 플래너입니다. 투명 3D 마스코트 '토리'의 파닥파닥 비행 모션, 비동기 백그라운드 병렬 추론, 일자별 분할 동선 맵 및 나눔고딕 유니코드 PDF 가이드북을 자동 생성합니다.
+              </p>
+
+              <div className="grid grid-cols-3 gap-2.5 pt-1">
+                <div className="p-2.5 bg-zinc-900 border border-zinc-800 rounded-lg">
+                  <div className="text-[10px] text-zinc-500 font-mono uppercase">RAG Pipeline</div>
+                  <div className="text-sm font-bold text-emerald-400 mt-0.5">2-Pass Graph</div>
+                  <div className="text-[10px] text-zinc-400">Sub-query MMR</div>
+                </div>
+                <div className="p-2.5 bg-zinc-900 border border-zinc-800 rounded-lg">
+                  <div className="text-[10px] text-zinc-500 font-mono uppercase">Viewfinder</div>
+                  <div className="text-sm font-bold text-white mt-0.5">59 Cities</div>
+                  <div className="text-[10px] text-zinc-400">HQ Real Photo</div>
+                </div>
+                <div className="p-2.5 bg-zinc-900 border border-zinc-800 rounded-lg">
+                  <div className="text-[10px] text-zinc-500 font-mono uppercase">Export Engine</div>
+                  <div className="text-sm font-bold text-cyan-400 mt-0.5">Map &amp; PDF</div>
+                  <div className="text-[10px] text-zinc-400">Unicode Safe</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="space-y-4 pt-2 border-t border-zinc-800/80">
+              <div className="flex flex-wrap gap-1.5">
+                {[
+                  'Python 3.10+',
+                  'LangGraph',
+                  'ChromaDB Dual',
+                  'GPT-5.4-Mini',
+                  'Streamlit Cloud',
+                  '3D Mascot Motion',
+                  'NanumGothic PDF'
+                ].map((tech) => (
+                  <span
+                    key={tech}
+                    className="px-2 py-0.5 text-[11px] font-mono bg-zinc-900 text-zinc-300 border border-zinc-800 rounded"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+
+              <div className="flex items-center gap-3">
+                <a
+                  href="https://trippilothyegang.streamlit.app/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex-1 inline-flex items-center justify-center gap-1.5 px-4 py-2 text-xs font-semibold text-zinc-950 bg-emerald-400 hover:bg-emerald-300 transition-colors rounded-lg shadow-sm font-mono"
+                >
+                  🚀 Live Service Launch ↗
+                </a>
+                <a
+                  href="https://github.com/strongsun806/TripPilot"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center justify-center gap-1.5 px-4 py-2 text-xs font-semibold text-zinc-300 bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 transition-colors rounded-lg font-mono"
+                >
+                  GitHub Source ↗
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Card 2: Volt-Spec */}
+          <div className="rounded-xl border border-zinc-800 bg-zinc-950 p-6 sm:p-7 shadow-2xl flex flex-col justify-between space-y-6 hover:border-amber-500/40 transition-all">
+            <div className="space-y-4">
+              <div className="flex items-center justify-between border-b border-zinc-800/80 pb-3">
+                <div className="flex items-center gap-2">
+                  <div className="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400">
+                    <Zap className="w-4 h-4" />
+                  </div>
+                  <span className="text-xs font-mono text-amber-400 font-bold uppercase tracking-wider">
+                    EV &amp; Battery Engineering
+                  </span>
+                </div>
+                <span className="text-[11px] font-mono text-amber-300 bg-amber-500/15 px-2.5 py-1 rounded border border-amber-500/30">
+                  Strict Citation [근거 N]
+                </span>
+              </div>
+
+              <div>
+                <h3 className="text-2xl font-black text-white">Volt-Spec (볼트스펙)</h3>
+                <p className="text-xs font-mono text-amber-400 mt-1">
+                  EV &amp; High-Voltage Battery Technical Analysis RAG Console
+                </p>
+              </div>
+
+              <p className="text-zinc-400 text-xs sm:text-sm leading-relaxed">
+                국내외 양산형 전기차 100종의 공식 제원 메타데이터(<code className="text-amber-300 font-mono">ev_meta</code>)와 한국어 위키백과 기술 문서(<code className="text-amber-300 font-mono">ev_wiki</code>)를 병합한 <strong className="text-zinc-200">고전압 배터리 지식 분석 콘솔</strong>입니다. 800V 초급속 충전·배터리 셀 화학 조성에 대한 엄격한 <code className="text-emerald-400 font-mono">[근거 N]</code> 인용, 3단 기술 리포트 생성 및 허위 주장 팩트체크를 제공합니다.
+              </p>
+
+              <div className="grid grid-cols-3 gap-2.5 pt-1">
+                <div className="p-2.5 bg-zinc-900 border border-zinc-800 rounded-lg">
+                  <div className="text-[10px] text-zinc-500 font-mono uppercase">EV Catalog</div>
+                  <div className="text-sm font-bold text-amber-400 mt-0.5">100 Models</div>
+                  <div className="text-[10px] text-zinc-400">10 Spec Fields</div>
+                </div>
+                <div className="p-2.5 bg-zinc-900 border border-zinc-800 rounded-lg">
+                  <div className="text-[10px] text-zinc-500 font-mono uppercase">Retrieval</div>
+                  <div className="text-sm font-bold text-white mt-0.5">MMR λ=0.6</div>
+                  <div className="text-[10px] text-zinc-400">Dual Vector Store</div>
+                </div>
+                <div className="p-2.5 bg-zinc-900 border border-zinc-800 rounded-lg">
+                  <div className="text-[10px] text-zinc-500 font-mono uppercase">Fact Check</div>
+                  <div className="text-sm font-bold text-emerald-400 mt-0.5">Zero Halluc.</div>
+                  <div className="text-[10px] text-zinc-400">3-Stage Report</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="space-y-4 pt-2 border-t border-zinc-800/80">
+              <div className="flex flex-wrap gap-1.5">
+                {[
+                  'Python 3.10+',
+                  'LangGraph',
+                  'ChromaDB',
+                  'MMR Search',
+                  'Streamlit UI',
+                  'WikiMedia Action API',
+                  'Fact-Check Engine'
+                ].map((tech) => (
+                  <span
+                    key={tech}
+                    className="px-2 py-0.5 text-[11px] font-mono bg-zinc-900 text-zinc-300 border border-zinc-800 rounded"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+
+              <div className="flex items-center gap-3">
+                <a
+                  href="https://github.com/strongsun806/voltspec"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex-1 inline-flex items-center justify-center gap-1.5 px-4 py-2 text-xs font-semibold text-zinc-950 bg-amber-400 hover:bg-amber-300 transition-colors rounded-lg shadow-sm font-mono"
+                >
+                  ⚡ GitHub Source &amp; Docs ↗
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* ========================================================================= */}
+      {/* 04. APPLIED WEB APPS & AI SERVICE PLANNING (LocalHub, Synapse, Pompom)    */}
       {/* ========================================================================= */}
       <div>
         <div className="flex items-center gap-3 mb-8">
           <span className="px-2.5 py-1 text-xs font-mono font-semibold tracking-wider uppercase bg-amber-500/10 text-amber-400 border border-amber-500/20 rounded">
-            Interactive Apps &amp; AI Services 03
+            Interactive Apps &amp; AI Services 04
           </span>
           <div className="h-px flex-1 bg-zinc-800" />
         </div>
@@ -578,12 +771,12 @@ export const FeaturedProjects = () => {
       </div>
 
       {/* ========================================================================= */}
-      {/* 04. ENGINEERING LAB: BOT AUTOMATION & AI / DATA ARCHIVE                   */}
+      {/* 05. ENGINEERING LAB: BOT AUTOMATION & AI / DATA ARCHIVE                   */}
       {/* ========================================================================= */}
       <div>
         <div className="flex items-center gap-3 mb-8">
           <span className="px-2.5 py-1 text-xs font-mono font-semibold tracking-wider uppercase bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 rounded">
-            Engineering Lab &amp; Archive 04
+            Engineering Lab &amp; Archive 05
           </span>
           <div className="h-px flex-1 bg-zinc-800" />
         </div>

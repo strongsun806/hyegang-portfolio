@@ -53,7 +53,25 @@
 
 ---
 
-### 2. Interactive Web & Service Planning
+### 2. Agentic AI & Domain Knowledge RAG Pipelines
+
+#### ✈️ [TripPilot](https://github.com/strongsun806/TripPilot) — Intelligent Multi-Hop Travel Copilot (Live: [trippilothyegang.streamlit.app](https://trippilothyegang.streamlit.app/))
+* 3D 비행 마스코트 '토리'와 함께하는 2-Pass LangGraph RAG 기반 대화형 글로벌 여행 일정 플래너
+* **Key Achievements:**
+  - **다단계 2-Pass LangGraph RAG 파이프라인**: 1차 메타데이터(`travel_meta`) 검색 후 서브쿼리를 자동 생성해 위키백과(`travel_wiki`) MMR 재검색을 수행하는 자가 확장 추론 구조 구현
+  - **100% 무결점 자연어 응답 가드레일**: `strip_citations()` 정제 엔진으로 기계적 인용 표기를 제거하고 친근한 일상 대화체 완결
+  - **멀티플랫폼 한글 PDF & 일자별 분할 동선 맵**: 나눔고딕 글리프 번들링으로 크로스 플랫폼 깨짐 없는 PDF 리포트 및 Day별 독립 지도 동선 렌더링
+
+#### ⚡ [Volt-Spec](https://github.com/strongsun806/voltspec) — EV & High-Voltage Battery Engineering RAG Console
+* 국내외 100종 양산 전기차 제원과 위키백과 기술 문서를 결합한 고전압 배터리 도메인 지식 분석 서비스
+* **Key Achievements:**
+  - **이중 컬렉션(Dual Vector Store) 병합 검색**: `ev_meta`(100종 정형 제원) + `ev_wiki`(비정형 기술 문서) 융합 및 유사도/MMR(`λ=0.6`) 전환 아키텍처
+  - **엄격한 `[근거 N]` 인용 가드레일**: 오직 검색된 문서에 명시된 사실만 답변하며 미확인 정보에 대한 할루시네이션 원천 차단
+  - **도메인 특화 팩트체크 & 3단 심층 리포트**: 배터리 안전 면책 가이드라인 준수 및 기술 주장 판정 시스템 구축
+
+---
+
+### 3. Interactive Web & Service Planning
 
 * **LocalHub:** Vue 3, Kakao Maps API, OpenAI API를 결합한 지역 관광 큐레이션 및 AI 챗봇 웹 서비스 (Netlify 배포)
 * **시냅스(Synapse) 파크:** Vision AI 기반 군중 밀집도 모니터링 및 테마파크(에버랜드) AI 컨시어지 서비스 기획
