@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Mail, Check, ArrowDown, Code2, Sparkles } from 'lucide-react';
+import { Mail, Check, ArrowDown, Code2, Sparkles, GraduationCap, FileDown } from 'lucide-react';
 
 export const Hero = () => {
   const [copied, setCopied] = useState(false);
@@ -19,6 +19,11 @@ export const Hero = () => {
           <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
           <span>AVAILABLE FOR FRONTEND, 3D SPATIAL &amp; AI ROLES</span>
         </div>
+
+        <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-500/10 border border-blue-500/30 text-xs font-mono text-blue-300">
+          <GraduationCap className="w-3.5 h-3.5 text-blue-400" />
+          <span>🎓 SSAFY 16기 Python Track 수강 중</span>
+        </span>
 
         <a
           href="#hackathon"
@@ -73,6 +78,15 @@ export const Hero = () => {
                 </>
               )}
             </button>
+
+            <a
+              href="./Hyegang_Kwon_Portfolio.pdf"
+              download="Hyegang_Kwon_Portfolio.pdf"
+              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-cyan-950/40 hover:bg-cyan-900/50 border border-cyan-500/30 text-cyan-300 text-sm font-medium transition-colors"
+            >
+              <FileDown className="w-4 h-4 text-cyan-400" />
+              <span>Resume PDF</span>
+            </a>
 
             {/* 순수 SVG GitHub 아이콘 */}
             <a

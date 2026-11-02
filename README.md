@@ -5,6 +5,7 @@
 
 [![Live Portfolio](https://img.shields.io/badge/Live_Portfolio-GitHub_Pages-38BDF8?style=flat-square&logo=github&logoColor=white)](https://strongsun806.github.io/hyegang-portfolio/)
 [![Hackathon](https://img.shields.io/badge/2026_Google_DeepMind-SafeCity_AI-7C3AED?style=flat-square&logo=googlegemini&logoColor=white)](https://github.com/strongsun806/GDM_HACK1)
+[![SSAFY](https://img.shields.io/badge/SSAFY_16%EA%B8%B0-Python_Track_%EC%88%98%EA%B0%95_%EC%A4%91-007ACC?style=flat-square&logo=python&logoColor=white)](https://www.ssafy.com/)
 [![Tech Stack](https://img.shields.io/badge/Stack-React_19_|_TypeScript_|_Tailwind_CSS-06B6D4?style=flat-square)](https://github.com/strongsun806/hyegang-portfolio)
 [![GitHub](https://img.shields.io/badge/GitHub-strongsun806-181717?style=flat-square&logo=github)](https://github.com/strongsun806)
 
