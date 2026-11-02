@@ -75,11 +75,13 @@
 
 * **LocalHub:** Vue 3, Kakao Maps API, OpenAI API를 결합한 지역 관광 큐레이션 및 AI 챗봇 웹 서비스 (Netlify 배포)
 * **시냅스(Synapse) 파크:** Vision AI 기반 군중 밀집도 모니터링 및 테마파크(에버랜드) AI 컨시어지 서비스 기획
-* **폼폼푸린 인터랙티브 UI:** Vanilla JS/CSS 마이크로 인터랙션과 커스텀 위젯 애니메이션 연구
+* **[RE:MEMORY (기억의 필름)](https://github.com/strongsun806/RE-MEMORY):** 어르신의 단편 구술 기억을 Gemini Argon 쇼러너 멀티에이전트와 Web Audio API 절차적 사운드스케이프로 4막 시네마틱 웹툰 필름으로 복원하는 전시급 인터랙티브 AI 기억 복원 솔루션 (React 19, TypeScript, Tailwind CSS)
 
 ---
 
-### 3. Engineering Lab & Automation
+### 4. Engineering Lab & Automation
+
+* **[celestial-github-profile](https://github.com/strongsun806/celestial-github-profile):** 3D 기하학 키캡, 텔레메트리 HUD, WebGL 3D 복셀 잔디밭을 결합한 인터랙티브 GitHub 프로필 템플릿 오픈소스 (GitHub Actions CI/CD 기반 자동 렌더링)
 
 * **swea-picker bot:** 삼성 SW Expert Academy(SWEA) 알고리즘 스터디를 위한 난이도별(D1~D4) 문제 랜덤 큐레이션 및 운영 자동화 봇
 * **AI & Data Science Archive:** PyMuPDF 기반 문서 파싱 & RAG 파이프라인 실험, Scikit-learn 회귀 모델 및 데이터 전처리(Pandas)
@@ -87,7 +89,7 @@
 
 ---
 
-### 4. Tech Instruction & Mentorship
+### 5. Tech Instruction & Mentorship
 
 수강생의 눈높이에 맞춘 체감형 커리큘럼 설계 및 라이브 디버깅 코칭 경험
 

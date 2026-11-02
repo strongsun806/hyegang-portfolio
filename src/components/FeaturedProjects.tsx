@@ -11,7 +11,9 @@ import {
   Radio,
   Volume2,
   Plane,
-  Zap
+  Zap,
+  Film,
+  Globe
 } from 'lucide-react';
 
 export const FeaturedProjects = () => {
@@ -242,8 +244,6 @@ export const FeaturedProjects = () => {
                   </button>
                 ))}
               </div>
-            </div>
-          </div>
         </div>
       </div>
 
@@ -740,31 +740,33 @@ export const FeaturedProjects = () => {
             </div>
           </div>
 
-          {/* Card 3: Pompompurin Interactive */}
+          {/* Card 3: RE:MEMORY (AI Cinema & Webtoon Memory Restorer) */}
           <div className="p-6 rounded-xl bg-zinc-900/60 border border-zinc-800 hover:border-zinc-700 transition-all flex flex-col justify-between space-y-4">
             <div className="space-y-3">
-              <div className="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400">
-                <Sparkles className="w-5 h-5" />
+              <div className="w-10 h-10 rounded-lg bg-rose-500/10 border border-rose-500/20 flex items-center justify-center text-rose-400">
+                <Film className="w-5 h-5" />
               </div>
-              <h3 className="text-xl font-bold text-white">폼폼푸린 인터랙티브 UI</h3>
-              <p className="text-xs font-mono text-amber-400">Theme Widget &amp; Custom Animation</p>
+              <h3 className="text-xl font-bold text-white">RE:MEMORY (기억의 필름)</h3>
+              <p className="text-xs font-mono text-rose-400">AI Cinema &amp; Webtoon Memory Restorer</p>
               <p className="text-xs text-zinc-400 leading-relaxed">
-                캐릭터 테마 기반 감각적인 프론트엔드 인터랙션과 커스텀 위젯 구현. 마이크로 인터랙션과 정밀한 CSS 스타일링을 통한 사용자 경험 극대화.
+                어르신의 단편 구술 기억을 Gemini Argon 쇼러너 엔진과 Web Audio 절차적 사운드스케이프로 4막 시네마틱 웹툰 필름으로 복원하는 전시급 AI 솔루션.
               </p>
             </div>
             <div className="space-y-3 pt-2">
               <div className="flex flex-wrap gap-1">
-                {['JavaScript', 'CSS Animation', 'Micro-interaction', 'UI Widget'].map((t) => (
-                  <span key={t} className="px-2 py-0.5 text-[10px] bg-zinc-800 text-zinc-300 rounded">
+                {['React 19', 'TypeScript', 'Gemini Argon', 'Web Audio API', 'Tailwind CSS'].map((t) => (
+                  <span key={t} className="px-2 py-0.5 text-[10px] bg-zinc-800 text-zinc-300 rounded font-mono">
                     {t}
                   </span>
                 ))}
               </div>
               <div className="flex gap-2 pt-1 border-t border-zinc-800 text-xs font-mono text-zinc-400">
-                <a href="https://github.com/strongsun806" target="_blank" rel="noreferrer" className="hover:text-white inline-flex items-center gap-1">
+                <a href="https://github.com/strongsun806/RE-MEMORY" target="_blank" rel="noreferrer" className="hover:text-white inline-flex items-center gap-1">
                   GitHub <ExternalLink className="w-3 h-3" />
                 </a>
               </div>
+            </div>
+          </div>
             </div>
           </div>
         </div>
@@ -781,7 +783,7 @@ export const FeaturedProjects = () => {
           <div className="h-px flex-1 bg-zinc-800" />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* Card 1: swea-picker Bot */}
           <div className="p-6 rounded-xl bg-zinc-900/60 border border-zinc-800 hover:border-zinc-700 transition-all space-y-4">
             <div className="flex items-start justify-between">
@@ -831,6 +833,41 @@ export const FeaturedProjects = () => {
                   {t}
                 </span>
               ))}
+            </div>
+          </div>
+
+          {/* Card 3: celestial-github-profile */}
+          <div className="p-6 rounded-xl bg-zinc-900/60 border border-zinc-800 hover:border-zinc-700 transition-all space-y-4 flex flex-col justify-between">
+            <div className="space-y-4">
+              <div className="flex items-start justify-between">
+                <div className="w-10 h-10 rounded-lg bg-sky-500/10 border border-sky-500/20 flex items-center justify-center text-sky-400">
+                  <Globe className="w-5 h-5" />
+                </div>
+                <span className="text-[11px] font-mono text-zinc-500 bg-zinc-800/80 px-2 py-0.5 rounded">
+                  Open Source
+                </span>
+              </div>
+              <div>
+                <h3 className="text-lg font-bold text-white">celestial-github-profile</h3>
+                <p className="text-xs font-mono text-sky-400 mt-0.5">3D Spatial GitHub Profile Suite</p>
+              </div>
+              <p className="text-xs text-zinc-400 leading-relaxed">
+                3D 기하학 키캡, 텔레메트리 HUD, WebGL 3D 복셀 잔디밭을 결합한 인터랙티브 GitHub 프로필 템플릿 오픈소스. GitHub Actions 자동화 파이프라인.
+              </p>
+            </div>
+            <div className="space-y-3 pt-1 border-t border-zinc-800/80">
+              <div className="flex flex-wrap gap-1.5">
+                {['Three.js', 'WebGL', 'TypeScript', 'GitHub Actions', 'Spatial UI'].map((t) => (
+                  <span key={t} className="px-2 py-0.5 text-[10px] bg-zinc-800 text-zinc-300 rounded font-mono">
+                    {t}
+                  </span>
+                ))}
+              </div>
+              <div className="pt-1 text-xs font-mono text-zinc-400">
+                <a href="https://github.com/strongsun806/celestial-github-profile" target="_blank" rel="noreferrer" className="text-sky-400 hover:text-sky-300 inline-flex items-center gap-1">
+                  GitHub Source <ExternalLink className="w-3 h-3" />
+                </a>
+              </div>
             </div>
           </div>
         </div>
