@@ -244,6 +244,8 @@ export const FeaturedProjects = () => {
                   </button>
                 ))}
               </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -765,8 +767,6 @@ export const FeaturedProjects = () => {
                   GitHub <ExternalLink className="w-3 h-3" />
                 </a>
               </div>
-            </div>
-          </div>
             </div>
           </div>
         </div>
