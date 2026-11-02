@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>권혜강 (Hyegang Kwon) — Engineering Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Noto+Sans+KR:wght@400;500;700;900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    @page {
+      size: A4;
+      margin: 12mm 14mm;
+    }
+    * {
+      box-sizing: border-box;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+    body {
+      font-family: 'Noto Sans KR', 'Plus Jakarta Sans', -apple-system, sans-serif;
+      background: #09090b;
+      color: #e4e4e7;
+      margin: 0;
+      padding: 0;
+      font-size: 11px;
+      line-height: 1.55;
+    }
+    .page {
+      padding: 4px 0 16px 0;
+      page-break-after: always;
+      position: relative;
+    }
+    .page:last-child {
+      page-break-after: avoid;
+    }
+    h1, h2, h3, h4 {
+      margin: 0;
+      font-weight: 800;
+      color: #ffffff;
+    }
+    a {
+      color: #38bdf8;
+      text-decoration: none;
+    }
+    .mono {
+      font-family: 'JetBrains Mono', monospace;
+    }
+    
+    /* Header */
+    .header {
+      border-bottom: 2px solid #27272a;
+      padding-bottom: 12px;
+      margin-bottom: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+    .title-name {
+      font-size: 26px;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .title-sub {
+      font-size: 13px;
+      color: #38bdf8;
+      font-weight: 700;
+      margin-top: 3px;
+    }
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 3px 9px;
+      background: rgba(14, 165, 233, 0.12);
+      border: 1px solid rgba(14, 165, 233, 0.35);
+      border-radius: 9999px;
+      font-size: 10.5px;
+      color: #7dd3fc;
+      font-weight: 600;
+      margin-top: 6px;
+    }
+    .contact-block {
+      text-align: right;
+      font-size: 10.5px;
+      color: #a1a1aa;
+      line-height: 1.6;
+    }
+    .contact-block a {
+      color: #cbd5e1;
+    }
+
+    /* Section */
+    .section-title {
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: #a1a1aa;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin: 12px 0 8px 0;
+      border-bottom: 1px solid #27272a;
+      padding-bottom: 4px;
+    }
+    .section-title span.tag {
+      font-size: 9.5px;
+      padding: 2px 6px;
+      border-radius: 4px;
+      background: #27272a;
+      color: #e4e4e7;
+    }
+
+    /* Skills Grid */
+    .skill-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+    .skill-card {
+      background: #18181b;
+      border: 1px solid #27272a;
+      border-radius: 6px;
+      padding: 7px 9px;
+    }
+    .skill-card-title {
+      font-size: 10.5px;
+      font-weight: 700;
+      color: #38bdf8;
+      margin-bottom: 4px;
+    }
+    .skill-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3px;
+    }
+    .pill {
+      background: #27272a;
+      color: #d4d4d8;
+      padding: 1.5px 5px;
+      border-radius: 3px;
+      font-size: 9.5px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* Project Cards */
+    .proj-card {
+      background: #141417;
+      border: 1px solid #27272a;
+      border-radius: 8px;
+      padding: 10px 12px;
+      margin-bottom: 10px;
+    }
+    .proj-card.highlight {
+      border: 1px solid rgba(168, 85, 247, 0.4);
+      background: rgba(168, 85, 247, 0.04);
+    }
+    .proj-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 4px;
+    }
+    .proj-name {
+      font-size: 14px;
+      font-weight: 800;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .proj-sub {
+      font-size: 10.5px;
+      color: #a78bfa;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .proj-badge {
+      font-size: 9.5px;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-weight: 600;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .badge-purple {
+      background: rgba(168, 85, 247, 0.18);
+      border: 1px solid rgba(168, 85, 247, 0.4);
+      color: #d8b4fe;
+    }
+    .badge-cyan {
+      background: rgba(6, 182, 212, 0.15);
+      border: 1px solid rgba(6, 182, 212, 0.35);
+      color: #67e8f9;
+    }
+    .badge-emerald {
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(16, 185, 129, 0.35);
+      color: #6ee7b7;
+    }
+    .badge-rose {
+      background: rgba(244, 63, 94, 0.15);
+      border: 1px solid rgba(244, 63, 94, 0.35);
+      color: #fda4af;
+    }
+    .badge-amber {
+      background: rgba(245, 158, 11, 0.15);
+      border: 1px solid rgba(245, 158, 11, 0.35);
+      color: #fcd34d;
+    }
+
+    .proj-desc {
+      font-size: 10.5px;
+      color: #a1a1aa;
+      margin-bottom: 6px;
+      line-height: 1.5;
+    }
+    .proj-bullets {
+      margin: 0 0 6px 0;
+      padding-left: 14px;
+      color: #d4d4d8;
+      font-size: 10px;
+    }
+    .proj-bullets li {
+      margin-bottom: 2.5px;
+    }
+    .metrics-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6px;
+      background: #09090b;
+      border: 1px solid #27272a;
+      border-radius: 5px;
+      padding: 5px 8px;
+      margin: 6px 0;
+    }
+    .metric-box {
+      text-align: center;
+    }
+    .metric-label {
+      font-size: 8.5px;
+      color: #71717a;
+      text-transform: uppercase;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .metric-val {
+      font-size: 12px;
+      font-weight: 800;
+      color: #38bdf8;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .metric-sub {
+      font-size: 8.5px;
+      color: #a1a1aa;
+    }
+
+    .proj-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 5px;
+      padding-top: 5px;
+      border-top: 1px solid #27272a;
+      font-size: 9.5px;
+    }
+    .tech-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+    .tech-tag {
+      background: #1f1f23;
+      color: #94a3b8;
+      padding: 1px 5px;
+      border-radius: 3px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px;
+    }
+    .proj-links a {
+      color: #38bdf8;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 600;
+      margin-left: 8px;
+    }
+
+    /* Two column grid */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 9px;
+    }
+
+    /* Footer */
+    .page-footer {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: space-between;
+      color: #52525b;
+      font-size: 9px;
+      font-family: 'JetBrains Mono', monospace;
+      border-top: 1px solid #18181b;
+      padding-top: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========================================================================= -->
+  <!-- PAGE 1: HEADER, BIO, SKILLS & HACKATHON + FLAGSHIP 1                      -->
+  <!-- ========================================================================= -->
+  <div class="page">
+    <div class="header">
+      <div>
+        <div class="title-name">
+          권혜강 <span style="font-size: 18px; color: #a1a1aa; font-weight: 600;">(Hyegang Kwon)</span>
+        </div>
+        <div class="title-sub">
+          Spatial Web &amp; 3D Digital Twin • Creative Multi-Agent AI Engineer
+        </div>
+        <div class="status-badge">
+          🎓 SSAFY 16기 Python Track 수강 중 • Available for AI &amp; Spatial Roles
+        </div>
+      </div>
+      <div class="contact-block mono">
+        <div>📧 <a href="mailto:khg010806@gmail.com">khg010806@gmail.com</a></div>
+        <div>🌐 <a href="https://strongsun806.github.io/hyegang-portfolio/">strongsun806.github.io/hyegang-portfolio</a></div>
+        <div>🐙 <a href="https://github.com/strongsun806">github.com/strongsun806</a></div>
+      </div>
+    </div>
+
+    <!-- Core Tech Stack Matrix -->
+    <div class="section-title">
+      <span>🛠️ Core Engineering Stack</span>
+      <span class="tag mono">Production Ready</span>
+    </div>
+    <div class="skill-grid">
+      <div class="skill-card">
+        <div class="skill-card-title">🧠 AI &amp; Multi-Agent Systems</div>
+        <div class="skill-pills">
+          <span class="pill">Gemini 4 Argon (1M)</span>
+          <span class="pill">LangGraph</span>
+          <span class="pill">ChromaDB RAG</span>
+          <span class="pill">Safety Verifier</span>
+          <span class="pill">Rule Engine</span>
+          <span class="pill">Python</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-title">🧊 3D Spatial &amp; Graphics</div>
+        <div class="skill-pills">
+          <span class="pill">Three.js</span>
+          <span class="pill">React Three Fiber</span>
+          <span class="pill">InstancedMesh</span>
+          <span class="pill">WebGL / Shaders</span>
+          <span class="pill">Web Workers</span>
+          <span class="pill">D3.js</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-title">⚡ Frontend &amp; Architecture</div>
+        <div class="skill-pills">
+          <span class="pill">React 19</span>
+          <span class="pill">TypeScript</span>
+          <span class="pill">Next.js 14</span>
+          <span class="pill">Tailwind CSS</span>
+          <span class="pill">Vite</span>
+          <span class="pill">Docker / Cloud Run</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 00. SPECIAL HIGHLIGHT: 2026 Google DeepMind AI Hackathon -->
+    <div class="section-title">
+      <span>🏆 Special Highlight: 2026 Google DeepMind AI Hackathon</span>
+      <span class="tag mono">Track 3: AI for Social Good</span>
+    </div>
+    <div class="proj-card highlight">
+      <div class="proj-header">
+        <div>
+          <div class="proj-name">
+            SafeCity AI (안전도시 AI)
+            <span class="proj-badge badge-purple">Official Hackathon Submission · GDM_HACK1</span>
+          </div>
+          <div class="proj-sub">Autonomous 3D Underground Disaster &amp; Accessible Evacuation Digital Twin</div>
+        </div>
+        <div class="mono" style="font-size: 10px; color: #a78bfa;">2026.02</div>
+      </div>
+      <div class="proj-desc">
+        시간당 110mm 극한호우 및 지하철 화재 시 180초 만에 폭포(>2.7m/s)로 침수되는 역사에서 휠체어 이용자·교통약자·외국인을 실시간 구호하기 위해 설계된 <strong>3D 재난 관제 및 배리어프리 대피 디지털 트윈</strong>.
+      </div>
+      <div class="metrics-row">
+        <div class="metric-box">
+          <div class="metric-label">1M Context Fusion</div>
+          <div class="metric-val">418.2k 토큰</div>
+          <div class="metric-sub">CAD 도면 + 기상 + 24개 센서</div>
+        </div>
+        <div class="metric-box">
+          <div class="metric-label">Safety Verifier Audit</div>
+          <div class="metric-val" style="color: #4ade80;">99.6% 신뢰도</div>
+          <div class="metric-sub">침수 구역 환각 경로 0.0%</div>
+        </div>
+        <div class="metric-box">
+          <div class="metric-label">Rendering &amp; Voice</div>
+          <div class="metric-val" style="color: #67e8f9;">60 FPS / 4개국어</div>
+          <div class="metric-sub">Web Speech PA 동기화</div>
+        </div>
+      </div>
+      <ul class="proj-bullets">
+        <li><strong>Gemini 4 Argon 1M 토큰 멀티모달 추론</strong>: 184p 지하철 역사 건축 CAD 도면과 시간대별 강수 레이더, 24개 IoT 수위 센서 스트림을 418.2k 토큰 컨텍스트에 융합해 실시간 위험도 평가.</li>
+        <li><strong>Companion Safety Verifier Loop</strong>: LLM이 침수 계단이나 화재 구역으로 승객을 유도하는 환각을 물리 충돌 엔진과 교차 검증하여 위험 경로 생성 원천 차단.</li>
+        <li><strong>배리어프리 3D 이원화 대피</strong>: 일반 승객 대피로와 교통약자 전용 방수 엘리베이터(#3) 경로를 분리 생성하고, 한국어·영어·일본어·중국어 음성 안내를 실시간 합성.</li>
+      </ul>
+      <div class="proj-footer">
+        <div class="tech-list">
+          <span class="tech-tag">Gemini 4 Argon</span>
+          <span class="tech-tag">Next.js 14</span>
+          <span class="tech-tag">Three.js / R3F</span>
+          <span class="tech-tag">Companion Verifier</span>
+          <span class="tech-tag">Gemma 3 On-Device Fallback</span>
+        </div>
+        <div class="proj-links">
+          <a href="https://github.com/strongsun806/GDM_HACK1">GitHub: strongsun806/GDM_HACK1 ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 01. FLAGSHIP 1: FINDER Digital Twin -->
+    <div class="section-title">
+      <span>🔷 Flagship 1: Digital Twin Infrastructure</span>
+      <span class="tag mono">60 FPS Spatial Monitoring</span>
+    </div>
+    <div class="proj-card">
+      <div class="proj-header">
+        <div>
+          <div class="proj-name">
+            FINDER (파인더)
+            <span class="proj-badge badge-cyan">3D Digital Twin Platform</span>
+          </div>
+          <div class="proj-sub">Real-time Spatial Monitoring &amp; 1,400+ Sensor Node Virtualization</div>
+        </div>
+        <div class="mono" style="font-size: 10px; color: #67e8f9;">2025.08 - 2025.11</div>
+      </div>
+      <div class="proj-desc">
+        대규모 공간 인프라 및 1,400개 이상의 다중 센서 노드를 실시간 3D로 가상화한 디지털 트윈 관제 플랫폼.
+      </div>
+      <ul class="proj-bullets">
+        <li><strong>InstancedMesh 단일 드로우콜 최적화</strong>: 1,400개 동적 센서 객체를 단일 메시로 배칭하여 GPU 드로우콜을 95% 절감하고 모바일/저사양 브라우저에서도 60 FPS 엄수.</li>
+        <li><strong>Web Worker 백그라운드 데이터 파이프라인</strong>: 대용량 시계열 텔레메트리 연산을 백그라운드 스레드로 분리하여 UI 프리징 없는 실시간 스트리밍 구현.</li>
+        <li><strong>Raycasting 공간 피킹 &amp; LOD</strong>: 3단계 계층적 Level-of-Detail(LOD)을 적용해 카메라 줌 레벨에 따라 렌더링 비용을 지능적으로 분산.</li>
+      </ul>
+      <div class="proj-footer">
+        <div class="tech-list">
+          <span class="tech-tag">Three.js</span>
+          <span class="tech-tag">React Three Fiber</span>
+          <span class="tech-tag">Web Workers</span>
+          <span class="tech-tag">WebSocket</span>
+          <span class="tech-tag">TypeScript</span>
+        </div>
+        <div class="proj-links">
+          <a href="https://github.com/strongsun806/FINDER">GitHub: strongsun806/FINDER ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <span>권혜강 (Hyegang Kwon) — Engineering Portfolio</span>
+      <span>Page 1 / 3</span>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- PAGE 2: RE:MEMORY, LOTTE CHILSUNG AX, PORT SCRAP                          -->
+  <!-- ========================================================================= -->
+  <div class="page">
+    <div class="header" style="margin-bottom: 10px; padding-bottom: 8px;">
+      <div>
+        <div style="font-size: 16px; font-weight: 800; color: #fff;">권혜강 (Hyegang Kwon) — Major Engineering Projects</div>
+      </div>
+      <div class="mono" style="font-size: 10px; color: #a1a1aa;">
+        SSAFY 16기 Python Track • AI &amp; Spatial Web Portfolio
+      </div>
+    </div>
+
+    <!-- 02. FLAGSHIP 2: RE:MEMORY -->
+    <div class="section-title">
+      <span>🎞️ Flagship 2: Generative AI &amp; Interactive Multimedia</span>
+      <span class="tag mono">Museum-Grade Experience</span>
+    </div>
+    <div class="proj-card">
+      <div class="proj-header">
+        <div>
+          <div class="proj-name">
+            RE:MEMORY (기억의 필름)
+            <span class="proj-badge badge-rose">AI Cinema &amp; Webtoon Restorer</span>
+          </div>
+          <div class="proj-sub">Gemini Argon Showrunner Multi-Agent &amp; Procedural Soundscape</div>
+        </div>
+        <div class="mono" style="font-size: 10px; color: #fda4af;">2026.01 - 2026.02</div>
+      </div>
+      <div class="proj-desc">
+        어르신의 단편적 구술 기억이나 가족들의 추억을 입력받아, 신카이 마코토·픽사 감성의 <strong>고화질 4막 시네마틱 웹툰 필름</strong>으로 복원하는 전시급 인터랙티브 AI 기억 복원 솔루션.
+      </div>
+      <ul class="proj-bullets">
+        <li><strong>Gemini Argon 쇼러너 멀티에이전트</strong>: 파편화된 구술 인터뷰를 기승전결 4막 시네마 각본, 카메라 앵글 디렉션, 감정선 내레이션으로 정밀 구조화.</li>
+        <li><strong>Character Sheet Lock &amp; 연속성 자가 치유(Self-Healing)</strong>: 시대상, 소품(노란 우산, 낡은 구두), 인물 외형의 3대 일관성 지표를 감사하고 불일치 시 프롬프트 패치를 자동 주입하여 99% 시각적 연속성 보장.</li>
+        <li><strong>Web Audio API 절차적 사운드스케이프</strong>: 외부 음원 없이 브라운 노이즈 빗소리, 바이닐 LP 크랙클, 피아노 아르페지오를 브라우저에서 수학적으로 실시간 합성.</li>
+      </ul>
+      <div class="proj-footer">
+        <div class="tech-list">
+          <span class="tech-tag">React 19</span>
+          <span class="tech-tag">TypeScript</span>
+          <span class="tech-tag">Gemini Argon</span>
+          <span class="tech-tag">Web Audio API</span>
+          <span class="tech-tag">Tailwind CSS 4</span>
+        </div>
+        <div class="proj-links">
+          <a href="https://github.com/strongsun806/RE-MEMORY">GitHub: strongsun806/RE-MEMORY ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 03. SPECIAL DOMAIN: Lotte Chilsung AX -->
+    <div class="section-title">
+      <span>🥤 Special Domain: 롯데 AX 챌린지 2026</span>
+      <span class="tag mono">10,000 Scenario Virtual Market Validator</span>
+    </div>
+    <div class="proj-card highlight">
+      <div class="proj-header">
+        <div>
+          <div class="proj-name">
+            Lotte Chilsung AX — AI 페르소나 신제품 시장 검증 플랫폼
+            <span class="proj-badge badge-emerald">Deterministic Oracle + 3D Planogram</span>
+          </div>
+          <div class="proj-sub">500 Cohorts × 20 Market Variations = 10,000 Scenarios × 36 Months</div>
+        </div>
+        <div class="mono" style="font-size: 10px; color: #6ee7b7;">2026.02</div>
+      </div>
+      <div class="proj-desc">
+        음료 신제품(칠성사이다 제로 신규 플레이버, 펩시 제로, 기능성 제로 라인) 런칭 시의 비가역적 매몰 위험을 사전 제거하기 위한 <strong>10,000 AI 페르소나 가상시장 검증 및 3D 매대 플래노그램 리허설 플랫폼</strong>.
+      </div>
+      <div class="metrics-row">
+        <div class="metric-box">
+          <div class="metric-label">Parallel Simulation</div>
+          <div class="metric-val">10,000 Scenarios</div>
+          <div class="metric-sub">360,000 매장-월 / &lt; 2.0s</div>
+        </div>
+        <div class="metric-box">
+          <div class="metric-label">Adversarial Defense</div>
+          <div class="metric-val" style="color: #4ade80;">19.6% → 100.0%</div>
+          <div class="metric-sub">3-Round 스트레스 방어</div>
+        </div>
+        <div class="metric-box">
+          <div class="metric-label">Acceptance Gates</div>
+          <div class="metric-val" style="color: #67e8f9;">16 / 16 PASS</div>
+          <div class="metric-sub">AT-01..16 전수 통과</div>
+        </div>
+      </div>
+      <ul class="proj-bullets">
+        <li><strong>생성자-검증자 물리적 분리(Generator–Verifier Separation)</strong>: 설계 에이전트(Family Architect)와 해시 봉인된 36개월 결정론적 P&L 오라클을 완전 격리하여 수치 조작·환각 원천 방지.</li>
+        <li><strong>3D 리테일 매대 플래노그램 &amp; 16-Slot 대기열 엔진</strong>: CVS 편의점, 대형마트, 성수 팝업, 칠성몰 D2C 채널별 동선 및 매대 앞 체류시간(Dwell Time), 카트 통로 차단(Route Blocked) 실시간 시뮬레이션.</li>
+        <li><strong>Decision Cliff &amp; 7일 파일럿 점포 실측 보정</strong>: 체류시간, 슬로팅비, 판매속보, 원가율 5대 파괴 임계점을 이진 탐색으로 도출하고 7일 현장 실측치로 모델 편차를 보정하는 Stage-Gate 운영 프로세스 완성.</li>
+      </ul>
+      <div class="proj-footer">
+        <div class="tech-list">
+          <span class="tech-tag">TypeScript</span>
+          <span class="tech-tag">Three.js</span>
+          <span class="tech-tag">Canvas 2D Matrix</span>
+          <span class="tech-tag">Double-Entry P&amp;L</span>
+          <span class="tech-tag">D3.js Telemetry</span>
+        </div>
+        <div class="proj-links">
+          <a href="https://github.com/strongsun806/lotte-chilsung-ax">Repo: lotte-chilsung-ax ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 04. FLAGSHIP 3: Port Scrap -->
+    <div class="section-title">
+      <span>⚓ Flagship 3: Fintech &amp; Logistics Automation</span>
+      <span class="tag mono">Rule Engine Console</span>
+    </div>
+    <div class="proj-card">
+      <div class="proj-header">
+        <div>
+          <div class="proj-name">
+            Port Scrap (포트 스크랩)
+            <span class="proj-badge badge-cyan">Port Logistics Fintech Console</span>
+          </div>
+          <div class="proj-sub">Automated Demurrage Settlement &amp; ISO 6346 Container Verification</div>
+        </div>
+        <div class="mono" style="font-size: 10px; color: #67e8f9;">2025.04 - 2025.07</div>
+      </div>
+      <div class="proj-desc">
+        부산항 등 컨테이너 터미널과 포워더 간 수기 전표·이메일 중심의 비효율적 항만물류비(경과보관료·하역료) 정산 프로세스를 자동화하고, Rule Engine 기반 요율 산출 파이프라인을 구축한 핀테크 플랫폼.
+      </div>
+      <ul class="proj-bullets">
+        <li><strong>ISO 6346 컨테이너 체크디지트 검증</strong>: B/L 번호 및 컨테이너 식별 부호 무결성을 자동 검증하여 청구 오류 0건 유지.</li>
+        <li><strong>실시간 요율 연산 Rule Engine</strong>: 프리타임(Free Time), 터미널별 할증율, 환적 규정을 반영해 복잡한 보관료를 15ms 이내 즉각 계산.</li>
+      </ul>
+      <div class="proj-footer">
+        <div class="tech-list">
+          <span class="tech-tag">React</span>
+          <span class="tech-tag">TypeScript</span>
+          <span class="tech-tag">State Machine</span>
+          <span class="tech-tag">Rule Engine</span>
+          <span class="tech-tag">Tailwind CSS</span>
+        </div>
+        <div class="proj-links">
+          <a href="https://github.com/strongsun806/Port-scrap">GitHub: strongsun806/Port-scrap ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <span>권혜강 (Hyegang Kwon) — Engineering Portfolio</span>
+      <span>Page 2 / 3</span>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- PAGE 3: AGENTIC RAG, OPEN SOURCE, EDUCATION & MENTORSHIP                  -->
+  <!-- ========================================================================= -->
+  <div class="page">
+    <div class="header" style="margin-bottom: 10px; padding-bottom: 8px;">
+      <div>
+        <div style="font-size: 16px; font-weight: 800; color: #fff;">권혜강 (Hyegang Kwon) — Agentic RAG, Open Source &amp; Education</div>
+      </div>
+      <div class="mono" style="font-size: 10px; color: #a1a1aa;">
+        SSAFY 16기 Python Track • AI &amp; Spatial Web Portfolio
+      </div>
+    </div>
+
+    <!-- 05. AGENTIC AI & DOMAIN RAG SYSTEMS -->
+    <div class="section-title">
+      <span>✈️⚡ Agentic AI &amp; Domain RAG Systems</span>
+      <span class="tag mono">LangGraph Stateful Workflows</span>
+    </div>
+    <div class="two-col">
+      <!-- Card A: TripPilot -->
+      <div class="proj-card" style="margin-bottom: 0;">
+        <div class="proj-header">
+          <div>
+            <div class="proj-name" style="font-size: 12.5px;">
+              TripPilot (트립파일럿)
+              <span class="proj-badge badge-emerald">Live RAG</span>
+            </div>
+            <div class="proj-sub">Intelligent Multi-Hop Travel Copilot</div>
+          </div>
+        </div>
+        <div class="proj-desc" style="font-size: 9.5px;">
+          59대 글로벌 도시 메타데이터와 위키백과를 결합한 2-Pass LangGraph RAG 여행 플래너. 3D 마스코트 '토리' 비행 모션 및 한글 PDF 가이드북 자동 생성.
+        </div>
+        <ul class="proj-bullets" style="font-size: 9px;">
+          <li><strong>2-Pass LangGraph RAG</strong>: 1차 메타데이터 검색 후 서브쿼리를 자동 확장해 위키백과 MMR 재검색.</li>
+          <li><strong>자연어 가드레일 &amp; PDF</strong>: 기계적 인용 표기를 제거하고 크로스 플랫폼 한글 유니코드 PDF 리포트 동적 렌더링.</li>
+        </ul>
+        <div class="proj-footer">
+          <div class="tech-list">
+            <span class="tech-tag">LangGraph</span>
+            <span class="tech-tag">ChromaDB</span>
+            <span class="tech-tag">Python</span>
+          </div>
+          <div class="proj-links">
+            <a href="https://github.com/strongsun806/TripPilot">TripPilot ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card B: Volt-Spec -->
+      <div class="proj-card" style="margin-bottom: 0;">
+        <div class="proj-header">
+          <div>
+            <div class="proj-name" style="font-size: 12.5px;">
+              Volt-Spec (볼트스펙)
+              <span class="proj-badge badge-amber">Battery RAG</span>
+            </div>
+            <div class="proj-sub">EV High-Voltage Battery Analysis Console</div>
+          </div>
+        </div>
+        <div class="proj-desc" style="font-size: 9.5px;">
+          양산형 전기차 100종의 제원과 위키백과 문서를 병합한 고전압 배터리 지식 분석 콘솔. 엄격한 [근거 N] 인용 및 기술 주장 팩트체크 엔진 탑재.
+        </div>
+        <ul class="proj-bullets" style="font-size: 9px;">
+          <li><strong>이중 컬렉션 MMR 검색</strong>: 정형 제원(ev_meta) + 비정형 기술 문서(ev_wiki) 유사도/MMR(λ=0.6) 전환.</li>
+          <li><strong>할루시네이션 원천 차단</strong>: 검색 문서 외 추측 답변을 거부하는 엄격한 3단 기술 분석 리포트 생성.</li>
+        </ul>
+        <div class="proj-footer">
+          <div class="tech-list">
+            <span class="tech-tag">LangGraph</span>
+            <span class="tech-tag">Dual ChromaDB</span>
+            <span class="tech-tag">MMR</span>
+          </div>
+          <div class="proj-links">
+            <a href="https://github.com/strongsun806/voltspec">Volt-Spec ↗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 06. OPEN SOURCE & LAB -->
+    <div class="section-title" style="margin-top: 12px;">
+      <span>🪐 Open Source &amp; Engineering Lab</span>
+      <span class="tag mono">Community &amp; Automation</span>
+    </div>
+    <div class="two-col">
+      <div class="proj-card" style="margin-bottom: 0;">
+        <div class="proj-header">
+          <div>
+            <div class="proj-name" style="font-size: 12.5px;">
+              celestial-github-profile
+              <span class="proj-badge badge-cyan">Open Source</span>
+            </div>
+            <div class="proj-sub">3D Spatial GitHub Profile Suite</div>
+          </div>
+        </div>
+        <div class="proj-desc" style="font-size: 9.5px;">
+          3D 기하학 키캡, 텔레메트리 HUD, WebGL 3D 복셀 잔디밭을 결합한 인터랙티브 GitHub 프로필 템플릿 오픈소스. GitHub Actions 기반 자동화 렌더링 지원.
+        </div>
+        <div class="proj-footer">
+          <div class="tech-list">
+            <span class="tech-tag">Three.js</span>
+            <span class="tech-tag">WebGL</span>
+            <span class="tech-tag">SVG HUD</span>
+          </div>
+          <div class="proj-links">
+            <a href="https://github.com/strongsun806/celestial-github-profile">celestial-suite ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="proj-card" style="margin-bottom: 0;">
+        <div class="proj-header">
+          <div>
+            <div class="proj-name" style="font-size: 12.5px;">
+              swea-picker bot &amp; AI Archive
+              <span class="proj-badge badge-purple">Ops Bot</span>
+            </div>
+            <div class="proj-sub">Algorithm Problem Curator &amp; Automation</div>
+          </div>
+        </div>
+        <div class="proj-desc" style="font-size: 9.5px;">
+          SSAFY 알고리즘 스터디를 위한 SWEA D1~D4 문제 랜덤 큐레이션 봇 및 PyMuPDF 문서 파싱 RAG 실험 아카이브.
+        </div>
+        <div class="proj-footer">
+          <div class="tech-list">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">PyMuPDF</span>
+            <span class="tech-tag">Automation</span>
+          </div>
+          <div class="proj-links">
+            <a href="https://github.com/strongsun806/weekly-swea-picker">swea-picker ↗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 07. EDUCATION, MENTORSHIP & AWARDS -->
+    <div class="section-title" style="margin-top: 12px;">
+      <span>🎓 Education, Awards &amp; Mentorship</span>
+      <span class="tag mono">Background</span>
+    </div>
+    <div class="proj-card" style="margin-bottom: 0; padding: 8px 12px;">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+        <div>
+          <div style="font-size: 11px; font-weight: 700; color: #38bdf8; margin-bottom: 4px;">🎓 교육 및 공모전 (Education &amp; Competitions)</div>
+          <ul class="proj-bullets" style="padding-left: 12px; margin: 0; font-size: 9.5px;">
+            <li><strong>SSAFY (삼성청년SW아카데미) 16기 Python Track 수강 중</strong> (알고리즘, Python 백엔드, AI 집중 수강)</li>
+            <li><strong>2026 Google DeepMind AI Hackathon</strong> 출품 (Track 3: AI for Social Good — SafeCity AI)</li>
+            <li>에버랜드 비즈니스 기획 공모전 — 시냅스(Synapse) 파크 Vision AI 군중 분석 기획</li>
+          </ul>
+        </div>
+        <div>
+          <div style="font-size: 11px; font-weight: 700; color: #a78bfa; margin-bottom: 4px;">👨‍🏫 기술 강사 및 멘토십 (Tech Instruction)</div>
+          <ul class="proj-bullets" style="padding-left: 12px; margin: 0; font-size: 9.5px;">
+            <li><strong>도원고등학교 출강</strong>: EMG 근전도 센서 및 3채널 서보모터 독립 제어 바이오닉 핸드 제작 지도</li>
+            <li><strong>문경여고 • 용마고 출강</strong>: 피지컬 컴퓨팅 및 오픈소스 아두이노/라즈베리파이 워크숍 진행</li>
+            <li><strong>대학생 대상 AI 비전 코칭</strong>: OpenCV 파이프라인 및 실시간 객체 탐지 레이턴시 최적화 멘토링</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <span>권혜강 (Hyegang Kwon) — Engineering Portfolio</span>
+      <span>Page 3 / 3</span>
+    </div>
+  </div>
+
+</body>
+</html>
