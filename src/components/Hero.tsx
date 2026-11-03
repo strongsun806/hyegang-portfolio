@@ -25,12 +25,17 @@ export const Hero = () => {
           <span>🎓 SSAFY 16기 Python Track 수강 중</span>
         </span>
 
+        <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-rose-500/10 border border-rose-500/30 text-xs font-mono text-rose-300">
+          <Sparkles className="w-3.5 h-3.5 text-rose-400" />
+          <span>🏆 2025 부산라이즈 광고 숏폼 해커톤 대상</span>
+        </span>
+
         <a
           href="#hackathon"
           className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-purple-500/10 hover:bg-purple-500/20 border border-purple-500/30 text-xs font-mono text-purple-300 transition-colors"
         >
           <Sparkles className="w-3.5 h-3.5 text-purple-400" />
-          <span>🏆 2026 GOOGLE DEEPMIND AI HACKATHON PARTICIPANT</span>
+          <span>2026 GOOGLE DEEPMIND AI HACKATHON</span>
         </a>
       </div>
 
@@ -47,6 +52,7 @@ export const Hero = () => {
 
           <p className="text-zinc-400 text-base sm:text-lg max-w-2xl leading-relaxed">
             안녕하세요, 프론트엔드 &amp; 3D 공간 웹 엔지니어 <strong className="text-zinc-200 font-semibold">권혜강(Hyegang Kwon)</strong>입니다.
+            경북대학교 건설환경공학과(주전공) 및 컴퓨터학부 플랫폼소프트웨어공학(복수전공)을 전공하며, SSAFY 16기 Python Track에서 알고리즘 및 고성능 백엔드·AI 아키텍처를 집중 연마하고 있습니다.{' '}
             대규모 공간·센서 데이터의 실시간 시각화(Digital Twin)부터{' '}
             <strong className="text-purple-300 font-medium">2026 Google DeepMind AI Hackathon</strong>에서 구현한 3D 지하역사 재난 대피 디지털 트윈(<strong className="text-white">SafeCity AI</strong>)까지,
             사용성과 엔지니어링 성능 지표를 집요하게 최적화합니다.
