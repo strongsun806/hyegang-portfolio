@@ -78,10 +78,16 @@
       font-weight: 700;
       margin-top: 2px;
     }
+    .status-badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-top: 4px;
+    }
     .status-badge {
       display: inline-flex;
       align-items: center;
-      gap: 5px;
+      gap: 4px;
       padding: 2px 7px;
       background: #f0f9ff;
       border: 1px solid #bae6fd;
@@ -89,7 +95,11 @@
       font-size: 9.5px;
       color: #0369a1;
       font-weight: 600;
-      margin-top: 4px;
+    }
+    .status-badge.award {
+      background: #fef2f2;
+      border-color: #fecaca;
+      color: #b91c1c;
     }
     .contact-block {
       text-align: right;
@@ -226,6 +236,11 @@
       border: 1px solid #fecdd3;
       color: #be123c;
     }
+    .badge-award {
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      color: #b91c1c;
+    }
 
     .proj-desc {
       font-size: 9.5px;
@@ -341,8 +356,16 @@
         <div class="title-sub">
           Spatial Web &amp; 3D Digital Twin • Creative Multi-Agent AI Engineer
         </div>
-        <div class="status-badge">
-          SSAFY 16기 Python Track 수강 중 • Available for AI &amp; Spatial Roles
+        <div class="status-badge-row">
+          <span class="status-badge">
+            SSAFY 16기 Python Track 수강 중
+          </span>
+          <span class="status-badge award">
+            2025 부산라이즈 광고 숏폼 해커톤 대상
+          </span>
+          <span class="status-badge">
+            Available for AI &amp; Spatial Roles
+          </span>
         </div>
       </div>
       <div class="contact-block mono">
@@ -661,7 +684,7 @@
   </div>
 
   <!-- ========================================================================= -->
-  <!-- PAGE 3: VOLT-SPEC, OPEN SOURCE, EDUCATION & MENTORSHIP                    -->
+  <!-- PAGE 3: VOLT-SPEC, OPEN SOURCE, AWARDS & EDUCATION                        -->
   <!-- ========================================================================= -->
   <div class="page">
     <div class="header" style="margin-bottom: 8px; padding-bottom: 6px;">
@@ -785,23 +808,24 @@
       </div>
     </div>
 
-    <!-- 07. EDUCATION, MENTORSHIP & AWARDS -->
+    <!-- 07. AWARDS, EDUCATION & MENTORSHIP -->
     <div class="section-title" style="margin-top: 10px;">
-      <span>[Education, Competitions &amp; Mentorship]</span>
-      <span class="tag mono">Background</span>
+      <span>[Awards, Education &amp; Mentorship]</span>
+      <span class="tag mono">Verified Track Record</span>
     </div>
     <div class="proj-card" style="margin-bottom: 0; padding: 7px 10px;">
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+      <div style="display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 10px;">
         <div>
-          <div style="font-size: 10px; font-weight: 700; color: #0369a1; margin-bottom: 3px;">교육 및 공모전 (Education &amp; Competitions)</div>
+          <div style="font-size: 10px; font-weight: 700; color: #0369a1; margin-bottom: 3px;">수상 및 교육 (Awards &amp; Education)</div>
           <ul class="proj-bullets" style="padding-left: 11px; margin: 0; font-size: 9px;">
-            <li><strong>SSAFY (삼성청년SW아카데미) 16기 Python Track 수강 중</strong> (알고리즘, Python 백엔드, AI 집중 수강)</li>
-            <li><strong>2026 Google DeepMind AI Hackathon</strong> 출품 (Track 3: AI for Social Good — SafeCity AI)</li>
-            <li>에버랜드 비즈니스 기획 프로젝트 — 시냅스(Synapse) 파크 Vision AI 군중 분석 기획</li>
+            <li><strong>2025 부산라이즈혁신원 광고 영상 숏폼 해커톤 [대상 수상]</strong> (소비자 트렌드 및 바이럴 주목도 분석)</li>
+            <li><strong>SSAFY (삼성청년SW아카데미) 16기 Python Track 수강 중</strong> (자료구조/알고리즘, Python 백엔드 및 AI 아키텍처)</li>
+            <li><strong>2026 Google DeepMind AI Hackathon 출품</strong> (Track 3: AI for Social Good — SafeCity AI)</li>
+            <li>에버랜드 비즈니스 기획 프로젝트 (시냅스 파크 Vision AI 군중 분석 파이프라인 기획)</li>
           </ul>
         </div>
         <div>
-          <div style="font-size: 10px; font-weight: 700; color: #0f172a; margin-bottom: 3px;">기술 강사 및 멘토십 (Tech Instruction)</div>
+          <div style="font-size: 10px; font-weight: 700; color: #0f172a; margin-bottom: 3px;">기술 출강 및 멘토십 (Tech Instruction)</div>
           <ul class="proj-bullets" style="padding-left: 11px; margin: 0; font-size: 9px;">
             <li><strong>도원고등학교 출강</strong>: EMG 근전도 센서 및 3채널 서보모터 독립 제어 바이오닉 핸드 제작 지도</li>
             <li><strong>문경여고 • 용마고 출강</strong>: 피지컬 컴퓨팅 및 오픈소스 아두이노/라즈베리파이 워크숍 진행</li>
