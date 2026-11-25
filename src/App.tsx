@@ -19,6 +19,9 @@ function App() {
             <a href="#hackathon" className="text-purple-300 hover:text-purple-200 transition-colors font-semibold">
               HACKATHON &apos;26
             </a>
+            <a href="#woori-award" className="hidden sm:inline text-amber-300 hover:text-amber-200 transition-colors font-semibold">
+              AWARD &apos;26
+            </a>
             <a href="#projects" className="hover:text-white transition-colors">PROJECTS</a>
             <a href="#teaching" className="hover:text-white transition-colors">TEACHING</a>
             <a href="#lab" className="hover:text-white transition-colors">LAB</a>

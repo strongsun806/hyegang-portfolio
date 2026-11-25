@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Mail, Check, ArrowDown, Code2, Sparkles, GraduationCap, FileDown } from 'lucide-react';
+import { Mail, Check, ArrowDown, Code2, Sparkles, GraduationCap, FileDown, Trophy } from 'lucide-react';
 
 export const Hero = () => {
   const [copied, setCopied] = useState(false);
@@ -24,6 +24,14 @@ export const Hero = () => {
           <GraduationCap className="w-3.5 h-3.5 text-blue-400" />
           <span>🎓 SSAFY 16기 Python Track 수강 중</span>
         </span>
+
+        <a
+          href="#woori-award"
+          className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/30 text-xs font-mono text-amber-300 transition-colors"
+        >
+          <Trophy className="w-3.5 h-3.5 text-amber-400" />
+          <span>🏆 2026 WOORI × SSAFY AI Agent 아이디어 경진대회 우수상</span>
+        </a>
 
         <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-rose-500/10 border border-rose-500/30 text-xs font-mono text-rose-300">
           <Sparkles className="w-3.5 h-3.5 text-rose-400" />

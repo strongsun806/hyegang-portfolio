@@ -13,12 +13,15 @@ import {
   Plane,
   Zap,
   Film,
-  Globe
+  Globe,
+  Trophy,
+  Landmark
 } from 'lucide-react';
 
 export const FeaturedProjects = () => {
   const [activeFinderTab, setActiveFinderTab] = useState<'orbit' | 'picking' | 'stream'>('orbit');
   const [activeSafeCityTab, setActiveSafeCityTab] = useState<'dualpath' | 'verifier' | 'multilingual'>('dualpath');
+  const [activeWonTab, setActiveWonTab] = useState<'quote' | 'approval'>('quote');
 
   return (
     <section className="py-24 px-6 max-w-7xl mx-auto text-zinc-100 space-y-36">
@@ -241,6 +244,138 @@ export const FeaturedProjects = () => {
                     }`}
                   >
                     {idx + 1}. {tab === 'dualpath' ? '듀얼 3D 대피 경로' : tab === 'verifier' ? 'Safety Verifier 루프' : '4개국어 음성 & 드론'}
+                  </button>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* ========================================================================= */}
+      {/* 00-B. AWARD: 2026 WOORI x SSAFY AI Agent 아이디어 경진대회 (WON이사) — 우수상 */}
+      {/* ========================================================================= */}
+      <div id="woori-award" className="scroll-mt-24">
+        <div className="flex items-center gap-3 mb-8">
+          <span className="px-3 py-1 text-xs font-mono font-semibold tracking-wider uppercase bg-amber-500/15 text-amber-300 border border-amber-500/30 rounded flex items-center gap-1.5">
+            <Trophy className="w-3.5 h-3.5 text-amber-400" />
+            Excellence Award · 우수상
+          </span>
+          <span className="text-xs font-mono text-sky-400 hidden sm:inline">
+            2026 WOORI × SSAFY 우리WON뱅킹 AI Agent 아이디어 경진대회
+          </span>
+          <div className="h-px flex-1 bg-zinc-800" />
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <div className="lg:col-span-5 space-y-6">
+            <div>
+              <div className="inline-flex items-center gap-2 text-xs font-mono text-sky-400 mb-1.5">
+                <Landmark className="w-3.5 h-3.5" />
+                <span>TEAM WON주민 · FINALIST → 우수상 · 2026.10 - 2026.11</span>
+              </div>
+              <h2 className="text-3xl sm:text-4xl font-black tracking-tight text-white mb-2">
+                WON이사
+              </h2>
+              <p className="text-base text-sky-300 font-mono">
+                AI Financial-Moving Manager for Woori WON Banking
+              </p>
+            </div>
+
+            <p className="text-zinc-400 text-sm leading-relaxed">
+              주거래 은행을 옮기는 번거로움(자동이체·급여계좌·적금 만기)을 줄이고, 이사 후에도 우리WON뱅킹에 정착하게 돕는 <strong className="text-zinc-200">AI 금융 이사 매니저</strong>입니다.
+              기존 거래를 분석해 이동 비용·혜택·시점을 견적으로 보여 주고, 소비 분석·상품 추천·꿀머니 퀘스트·위비 프렌즈 캐릭터로 정착까지 이어 줍니다.{' '}
+              <strong className="text-sky-300">AI는 해석 · 시스템은 검증 · 고객은 승인</strong> 원칙으로, 계좌 변경·이체·가입은 고객의 최종 승인과 인증 뒤에만 실행됩니다.
+            </p>
+
+            <div className="grid grid-cols-3 gap-3 py-2">
+              <div className="p-3 bg-zinc-900 border border-zinc-800 rounded-lg">
+                <div className="text-[11px] text-zinc-500 font-mono uppercase">Unapproved Exec</div>
+                <div className="text-lg font-bold text-emerald-400 mt-1">0건</div>
+                <div className="text-[11px] text-zinc-400">Approval Gate</div>
+              </div>
+              <div className="p-3 bg-zinc-900 border border-zinc-800 rounded-lg">
+                <div className="text-[11px] text-zinc-500 font-mono uppercase">Moving Scenarios</div>
+                <div className="text-lg font-bold text-sky-300 mt-1">21 / 21</div>
+                <div className="text-[11px] text-zinc-400">3회 반복 통과</div>
+              </div>
+              <div className="p-3 bg-zinc-900 border border-zinc-800 rounded-lg">
+                <div className="text-[11px] text-zinc-500 font-mono uppercase">All Scenarios</div>
+                <div className="text-lg font-bold text-amber-300 mt-1">93~97%</div>
+                <div className="text-[11px] text-zinc-400">29개 · 가드 포함</div>
+              </div>
+            </div>
+            <p className="text-[11px] font-mono text-zinc-500 -mt-3">
+              * 팀 자체 평가 · qwen3:8b 로컬 실행 · 가상 고객 데이터 (2026-11-12)
+            </p>
+
+            <div className="space-y-2">
+              <div className="text-xs font-mono uppercase text-zinc-500">My Role</div>
+              <ul className="space-y-1.5 text-xs text-zinc-400 leading-relaxed">
+                <li>• <strong className="text-zinc-200">앱 목업 설계·구현</strong> — 장면별(견적·계획·재계획·승인 게이트·실패 감지·정착) 앱 화면과 Agent 실행 로그 데모 화면</li>
+                <li>• <strong className="text-zinc-200">시연 영상 제작</strong> — 시나리오 기반 WON이사 Agent 데모 영상</li>
+                <li>• <strong className="text-zinc-200">결선 발표자료 제작</strong> — 10분 PT 구성 및 시각화</li>
+              </ul>
+            </div>
+
+            <div className="space-y-2">
+              <div className="text-xs font-mono uppercase text-zinc-500">Tech &amp; Design</div>
+              <div className="flex flex-wrap gap-1.5">
+                {[
+                  'AI Agent Tool Calling',
+                  'qwen3:8b · Ollama',
+                  'System Verification Engine',
+                  'Approval Gate',
+                  'Mobile Banking UX',
+                  'Demo Video'
+                ].map((tech) => (
+                  <span
+                    key={tech}
+                    className="px-2.5 py-1 text-xs font-medium bg-zinc-900 text-zinc-300 border border-zinc-800 rounded-md"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <div className="flex items-center gap-3 pt-2">
+              <a
+                href="https://github.com/strongsun806/WOORI_SSAFY_2026"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-zinc-950 bg-white hover:bg-zinc-200 transition-colors rounded-lg shadow-sm"
+              >
+                GitHub Source (WOORI_SSAFY_2026) ↗
+              </a>
+            </div>
+          </div>
+
+          {/* 우측: WON이사 앱 목업 & Agent 실행 로그 */}
+          <div className="lg:col-span-7 space-y-3">
+            <div className="relative rounded-xl overflow-hidden border border-sky-500/30 bg-zinc-950 shadow-2xl">
+              <img
+                src={activeWonTab === 'quote' ? './projects/won-isa-quote.webp' : './projects/won-isa-approval.webp'}
+                alt={activeWonTab === 'quote' ? 'WON이사 이사 견적 화면과 Agent 실행 로그' : 'WON이사 승인 게이트 화면과 Agent 실행 로그'}
+                width={1400}
+                height={1044}
+                loading="lazy"
+                className="w-full h-auto block"
+              />
+            </div>
+
+            <div className="flex items-center justify-between p-1 bg-zinc-900 border border-zinc-800 rounded-lg">
+              <span className="text-xs font-mono text-zinc-500 pl-3">SCENE:</span>
+              <div className="flex gap-1">
+                {(['quote', 'approval'] as const).map((tab, idx) => (
+                  <button
+                    key={tab}
+                    onClick={() => setActiveWonTab(tab)}
+                    className={`px-3 py-1.5 text-xs font-medium rounded-md transition-all ${
+                      activeWonTab === tab ? 'bg-zinc-800 text-white shadow-sm' : 'text-zinc-400 hover:text-white'
+                    }`}
+                  >
+                    {idx + 1}. {tab === 'quote' ? 'K2 이사 견적' : 'K5 승인 게이트'}
                   </button>
                 ))}
               </div>

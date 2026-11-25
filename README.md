@@ -5,6 +5,7 @@
 
 [![Live Portfolio](https://img.shields.io/badge/Live_Portfolio-GitHub_Pages-38BDF8?style=flat-square&logo=github&logoColor=white)](https://strongsun806.github.io/hyegang-portfolio/)
 [![Hackathon](https://img.shields.io/badge/2026_Google_DeepMind-SafeCity_AI-7C3AED?style=flat-square&logo=googlegemini&logoColor=white)](https://github.com/strongsun806/GDM_HACK1)
+[![Award](https://img.shields.io/badge/%F0%9F%8F%86_2026_WOORI_x_SSAFY-%EC%9A%B0%EC%88%98%EC%83%81_(WON%EC%9D%B4%EC%82%AC)-D97706?style=flat-square)](https://github.com/strongsun806/WOORI_SSAFY_2026)
 [![SSAFY](https://img.shields.io/badge/SSAFY_16%EA%B8%B0-Python_Track_%EC%88%98%EA%B0%95_%EC%A4%91-007ACC?style=flat-square&logo=python&logoColor=white)](https://www.ssafy.com/)
 [![Tech Stack](https://img.shields.io/badge/Stack-React_19_|_TypeScript_|_Tailwind_CSS-06B6D4?style=flat-square)](https://github.com/strongsun806/hyegang-portfolio)
 [![GitHub](https://img.shields.io/badge/GitHub-strongsun806-181717?style=flat-square&logo=github)](https://github.com/strongsun806)
@@ -33,6 +34,17 @@
   - **Gemini 4 Argon 1M 통합 컨텍스트(`418.2k tokens`)**: 184페이지 역사 CAD 도면, 기상청 실시간 강우 레이더, 24개 IoT 수위 센서를 단일 패스로 추론하여 **일반 승객(106명, 고지대 동측 4번 출구 Neon Green 경로)**과 **교통약자(14명, IP68 방수·양압 엘리베이터 #3 Neon Yellow 경로)** 3D 대피 벡터 분리 생성
   - **2-Stage Companion Safety Verifier Loop**: `gemini-2.0-flash-safety-verifier` + 유체역학/ADA 경사도(`<= 1/20`) 검증기 + 온디바이스 폴백(`gemma-3-4b-it-on-device`) 및 **Human-in-the-Loop(HITL) 역무실장 승인 게이트**로 침수 위험 반경(`3.8m`) 침범 노드 자가 교정
   - **60FPS Three.js / R3F 디지털 트윈 & 4개국어 실시간 음성 안내**: 물리 기반 수면(`MeshPhysicalMaterial`), 360+ 계단 폭포 파티클 및 자동 차수판, 자율 정찰 드론(`UAV-01 Argon Scout`), 한·영·일·중(`KO/EN/JA/ZH`) 실시간 Web Speech API 음성 안내 방송 구현
+
+---
+
+### 🏆 2026 WOORI × SSAFY 우리WON뱅킹 AI Agent 아이디어 경진대회 — 우수상
+
+#### 🏦 [WON이사](https://github.com/strongsun806/WOORI_SSAFY_2026) — AI Financial-Moving Manager (Team WON주민)
+* **결선 진출 및 발표 → 우수상 수상** (주제 2: 우리WON뱅킹의 미래 방향을 위한 AI Agent)
+* 주거래 은행 이동(금융 이사)의 비용·혜택·시점을 견적으로 보여 주고, 자동이체·급여계좌 이전을 순서대로 계획한 뒤 소비 분석·상품 추천·꿀머니 퀘스트·위비 프렌즈 캐릭터로 정착까지 돕는 AI 금융 이사 매니저
+* **AI는 해석 · 시스템은 검증 · 고객은 승인**: 계좌 변경·이체·상품 가입은 고객의 최종 승인과 공식 인증 뒤에만 실행
+* **팀 자체 평가 (qwen3:8b 로컬 · 가상 데이터 · 3회 반복)**: 승인 없는 실행 **0건**, 이사 시나리오 **21/21**, 전체 29개 중 **27~28개(93~97%)** 통과
+* **My Role:** 장면별 앱 목업 및 Agent 실행 로그 데모 화면 설계·구현, 시연 영상 제작, 결선 발표자료 제작
 
 ---
 
